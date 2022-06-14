@@ -43,11 +43,16 @@ tags:    # 所属标签
 title: 标题
 date: 2020-02-21 14:40:19
 permalink: /pages/a1bc87
+private: true     # 开启文章私密，必须
+#username: eashelp  # 用户名，必须
+#password: 123456  # 密码，必须
+#expire: 60000     # 登录状态超时清除时间，可选（不填则以全局超时时间为准，如果全局没有设置，则默认是一天）
 categories:
   - 分类1
   - 分类2
 tags:
   - 标签1
+navbar: false
 sidebar: false
 article: false
 comment: false
