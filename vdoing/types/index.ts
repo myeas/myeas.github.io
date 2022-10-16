@@ -32,6 +32,12 @@ export interface VdoingThemeConfig extends NoSidebar4DefaultThemeConfig {
   categoryText?: string;
 
   /**
+   * 页面风格
+   * @default 'card'
+   */
+  pageStyle?: 'card' | 'line';
+
+  /**
    * body背景大图链接。单张图片 string | 多张图片 string[], 多张图片时每隔15秒换一张。
    * @default ''
    */
@@ -42,6 +48,13 @@ export interface VdoingThemeConfig extends NoSidebar4DefaultThemeConfig {
    * @default 0.5
    */
   bodyBgImgOpacity?: 0.1 | 0.2 | 0.3 | 0.4 | 0.5 | 0.6 | 0.7 | 0.8 | 0.9 | 1;
+
+
+  /**
+   * body当多张背景图时，设置切换时间，默认15s
+   * @default 15
+   */
+  bodyBgImgInterval?: number;
 
   /**
    * 是否显示文章标题前的图标
@@ -87,6 +100,12 @@ export interface VdoingThemeConfig extends NoSidebar4DefaultThemeConfig {
    * @default true
    */
   pageButton?: boolean;
+
+  /**
+   * 默认外观模式
+   * @default 'auto'
+   */
+  defaultMode?: 'auto' | 'light' | 'dark' | 'read';
 
   /**
    * 侧边栏配置

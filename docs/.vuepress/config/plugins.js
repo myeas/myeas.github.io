@@ -1,12 +1,19 @@
 // 插件配置
 module.exports = [
   // 自定义插件，即本地插件
+  // [
+  //   {
+  //     name: 'custom-plugins',
+  //     globalUIComponents: ["LastReadingPopup", "BlockToggle", "GlobalTip", "Aplayer", "Twikoo"] // 2.x 版本 globalUIComponents 改名为 clientAppRootComponentFiles
+  //   }
+  // ],
   [
     {
       name: 'custom-plugins',
-      globalUIComponents: ["LastReadingPopup", "BlockToggle", "GlobalTip", "Aplayer", "Twikoo"] // 2.x 版本 globalUIComponents 改名为 clientAppRootComponentFiles
+      globalUIComponents: ["LastReadingPopup", "BlockToggle", "Aplayer", "Twikoo"] // 2.x 版本 globalUIComponents 改名为 clientAppRootComponentFiles
     }
   ],
+
   // 本地插件
   [require('../plugins/love-me'), { // 鼠标点击爱心特效
     color: '#11a8cd', // 爱心颜色，默认随机色

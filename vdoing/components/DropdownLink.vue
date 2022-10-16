@@ -131,7 +131,6 @@ export default {
         margin 0.45rem 0 0
         border-top 1px solid var(--borderColor)
         padding 0.45rem 1.5rem 0 1.25rem
-        //font-size 0.8rem            //导航样式
       .dropdown-subitem-wrapper
         padding 0
         list-style none

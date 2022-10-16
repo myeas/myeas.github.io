@@ -1,7 +1,7 @@
 <template>
   <div class="right-menu-wrapper">
     <div class="right-menu-margin">
-      <div class="right-menu-title">目录（如超出请滚动鼠标）</div>
+      <div class="right-menu-title">目录</div>
       <div class="right-menu-content">
         <div
           :class="[
@@ -49,14 +49,18 @@ export default {
 </script>
 
 <style lang='stylus'>
+.theme-style-line
+  .right-menu-wrapper
+    .right-menu-margin
+      border-left 1px solid var(--borderColor)
 .right-menu-wrapper
   width $rightMenuWidth
   float right
-  margin-right -($rightMenuWidth + 60px)               //官方55px
+  margin-right -($rightMenuWidth + 55px)
   // margin-top -($navbarHeight *2 + 1.5rem)
   position sticky
   top 0
-  font-size 0.9rem                                    //官方0.75rem
+  font-size 0.8rem
   .right-menu-margin
     margin-top: ($navbarHeight + 1rem)
     border-radius 3px
@@ -88,17 +92,15 @@ export default {
     &:hover
       overflow-y auto
       padding-right 0
-      // color $accentColor                       //官方无此项
-      // border-left 0.2rem solid $accentColor    //官方无此项
     .right-menu-item
       padding 4px 15px
-      //border-left 1px solid var(--borderColor)
-      // overflow hidden           //官方未注释
-      // white-space nowrap        //官方未注释
-      // text-overflow ellipsis    //官方未注释
-      // position relative         //官方未注释
+      // border-left 1px solid var(--borderColor)
+      overflow hidden
+      white-space nowrap
+      text-overflow ellipsis
+      position relative
       &.level2
-        font-size 0.9rem             //官方0.8rem
+        font-size 0.8rem
       &.level3
         padding-left 27px
       &.level4
@@ -108,9 +110,8 @@ export default {
       &.level6
         padding-left 57px
       &.active
-        border-left 0.2rem solid $accentColor
         &:before
-          //content ''
+          content ''
           position absolute
           top 5px
           left 0
@@ -126,17 +127,14 @@ export default {
         opacity 0.75
         display inline-block
         width 100%
-        //overflow hidden           //官方未注释
-        //white-space nowrap        //官方未注释
-        //text-overflow ellipsis    //官方未注释
+        overflow hidden
+        white-space nowrap
+        text-overflow ellipsis
         &:hover
           opacity 1
           color $accentColor                       //官方无此项
-          // border-left 0.2rem solid $accentColor    //官方无此项
-        
-      &:hover
-        color $accentColor
-        border-left 0.2rem solid $accentColor    //官方无此项
+    &:hover
+      color $accentColor
 .have-body-img
   .right-menu-wrapper
     .right-menu-margin

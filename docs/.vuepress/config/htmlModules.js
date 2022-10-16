@@ -70,20 +70,20 @@ module.exports = {
   //       </div>
   //     </div>
   //   </div>`,
-  homeSidebarB:
-  `<div style="padding: 0.95rem">
-  <p style="
-    color: var(--textColor);
-    opacity: 0.9;
-    font-size: 20px;
-    font-weight: bold;
-    margin: 0 0 8px 0;
-  ">公众号</p>
-  <img src="/easpublic/eashelpimg/ctcaierp258.jpg"  style="width:100%;" />
-  <p>
-  关注公众号，获取更多信息~
-  </p>
-  </div>`,
+  // homeSidebarB:
+  // `<div style="padding: 0.95rem">
+  // <p style="
+  //   color: var(--textColor);
+  //   opacity: 0.9;
+  //   font-size: 20px;
+  //   font-weight: bold;
+  //   margin: 0 0 8px 0;
+  // ">公众号</p>
+  // <img src="/easpublic/eashelpimg/ctcaierp258.jpg"  style="width:100%;" />
+  // <p>
+  // 关注公众号，获取更多信息~
+  // </p>
+  // </div>`,
   // `<!-- 纵向自适应 -->
   // <ins class="adsbygoogle"
   //     style="display:block;padding: 0.95rem;"
@@ -156,7 +156,7 @@ module.exports = {
   //         (adsbygoogle = window.adsbygoogle || []).push({});
   //     </script>
   //     `,
-  sidebarB: `<div><img src="/easpublic/eashelpimg/ctcaierp.png" alt="" style="cursor: zoom-in;"></div>`,
+  // sidebarB: `<div><img src="/easpublic/eashelpimg/ctcaierp.png" alt="" style="cursor: zoom-in;"></div>`,
 }
 
 
