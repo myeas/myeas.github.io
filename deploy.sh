@@ -4,7 +4,8 @@
 set -e
 
 # 生成静态文件
-npm install && export NODE_OPTIONS=--max_old_space_size=4096 &&npm run build
+#npm install && export NODE_OPTIONS=--max_old_space_size=4096 &&npm run build
+#yarn add -D vuepress && export NODE_OPTIONS=--max_old_space_size=4096 &&yarn build
 
 # 进入生成的文件夹
 cd docs/.vuepress/dist
