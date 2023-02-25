@@ -28,9 +28,78 @@ features: # 可选的
     details: 为您答疑解惑，让你从容使用系统
     link: ./pages/faq/
 
+hidearticlelistblock: true  #true不显示文章分组块，flase显示文章分组块
+articlelistblocklength: 10
+articlelistblock: # 可选的
+  - listname: 整车及二手车 #分类或标签的主题
+    listauto: auto             #auto,则与分类或标签的文章对应上，如果非auto则取listlink
+    listlink: ./pages/abc1/     #要与分类或标签的文章列表对应上，也可以自行指定
+    categoryortag: category    #值只能是category 或 tag
+    key: 整车  #分类或标签
+    articleLength: 8
+    icon: biaoqian1
+  - listname: 增值代办
+    listauto: auto
+    listlink: ./pages/abc2/
+    categoryortag: category    #值只能是category 或 tag
+    key: 增值代办
+    articleLength: 8
+    icon: biaoqian1
+  - listname: 精品配件
+    listauto: auto
+    listlink: ./pages/abc3/
+    categoryortag: category    #值只能是category 或 tag
+    key: 精品配件
+    articleLength: 8
+    icon: biaoqian1
+  - listname: 维修 #分类或标签的主题
+    listauto: auto             #auto,则与分类或标签的文章对应上，如果非auto则取listlink
+    listlink: ./pages/abc1/     #要与分类或标签的文章列表对应上，也可以自行指定
+    categoryortag: category    #值只能是category 或 tag
+    key: 维修  #分类或标签
+    articleLength: 8
+    icon: biaoqian1
+  - listname: 会员及客户权益
+    listauto: auto
+    listlink: ./pages/abc2/
+    categoryortag: category    #值只能是category 或 tag
+    key: 客户权益
+    articleLength: 8
+    icon: biaoqian1
+  - listname: 业务报表
+    listauto: auto
+    listlink: ./pages/abc3/
+    categoryortag: tag  #值只能是category 或 tag
+    key: 业务报表
+    articleLength: 8
+    icon: biaoqian1
+
+articlelistside: # 可选的
+  - listname: 问题集锦 #分类或标签的主题
+    listauto: auto             #auto,则与分类或标签的文章对应上，如果非auto则取listlink
+    listlink: ./pages/faq/     #要与分类或标签的文章列表对应上，也可以自行指定
+    categoryortag: category    #值只能是category 或 tag
+    key: 问题集锦  #分类或标签
+    articleLength: 20
+    icon: biaoqian1
+  - listname: 系统安装
+    listauto: auto
+    listlink: ./categories/?category=系统安装
+    categoryortag: category    #值只能是category 或 tag
+    key: 系统安装
+    articleLength: 7
+    icon: biaoqian1
+  - listname: 系统应用检查体系
+    listauto: auto
+    listlink: ./categories/?category=检查体系
+    categoryortag: category    #值只能是category 或 tag
+    key: 检查体系
+    articleLength: 7
+    icon: biaoqian1
+
 #文章列表显示方式: detailed 默认，显示详细版文章列表（包括作者、分类、标签、摘要、分页等）| simple => 显示简约版文章列表（仅标题和日期）| none 不显示文章列表
 #postList: none
-postList: simple  #detailed
+postList: none  #simple  #detailed
 simplePostListLength: 12 # 简约版文章列表显示的文章数量，默认10。（仅在postList设置为simple时生效）
 # hideRightBar: true # 是否隐藏右侧边栏 (v1.11.2+)
 ---
@@ -58,8 +127,22 @@ simplePostListLength: 12 # 简约版文章列表显示的文章数量，默认10
 </style>
 <br/>
 
+## 🎉公告通知
+
+- 请各门店抓紧时间上报工作流角色对应的用户清单，请于2023年2月28月前完成上报。
+
+## 🎉最近更新
+
+<ArticleListUpdate2 :length="20" />
+
+::: right
+
+[更多文章](/archives/)>
+
+:::
 
 ## 🎖专项专题
+
 ::: cardList 3
 ```yaml
 #- name: 业财一体化
@@ -132,21 +215,120 @@ simplePostListLength: 12 # 简约版文章列表显示的文章数量，默认10
 
 <br/>
 
+## 🎉指定分类或标签列表测试
 
+<!--ArticleListMore :currentPage="currentPage" :perPage="20" :category="''" /-->
 
-<!--
+### 一行一列：
+
+<ArticleListCategororTagUpdate1 :currentPage="currentPage" :perPage="5" :category="'二手车'" />
+
+### 一行两列：
+
+<ArticleListCategororTagUpdate2 :currentPage="currentPage" :perPage="6" :category="'二手车'" />
+
+### 一行三列：
+
+<ArticleListCategororTagUpdate3 :currentPage="currentPage" :perPage="9" :category="'二手车'" />
+
+## 🎉分类文章
+
+::: demo
+
+```
+<el-row :gutter="12">
+  <el-col :span="8" style="margin:-10px auto auto auto">
+    <el-card shadow="hover">
+  <div slot="header" class="clearfix">
+    <span><b>整车及二手车</b></span>
+    <el-button style="float: right; padding: 3px 0" type="text"><a href="/categories/?category=整车管理">更多...</a></el-button>
+  </div>
+  <div class="text item">
+    <ArticleListCategororTagUpdate :currentPage="currentPage" :perPage="5" :category="'二手车'" />
+  </div>
+    </el-card>
+  </el-col>
+  <el-col :span="8" style="margin:-10px auto auto auto">
+    <el-card shadow="hover">
+  <div slot="header" class="clearfix">
+    <span><b>增值代办</b></span>
+    <el-button style="float: right; padding: 3px 0" type="text"><a href="/categories/?category=增值代办">更多...</a></el-button>
+  </div>
+  <div class="text item">
+    <ArticleListCategororTagUpdate :currentPage="currentPage" :perPage="5" :category="'增值代办'" />
+  </div>
+    </el-card>
+  </el-col>
+  <el-col :span="8" style="margin:-10px auto auto auto">
+    <el-card shadow="hover">
+  <div slot="header" class="clearfix">
+    <span><b>精品配件</b></span>
+    <el-button style="float: right; padding: 3px 0" type="text"><a href="/categories/?category=精品配件">更多...</a></el-button>
+  </div>
+  <div class="text item">
+    <ArticleListCategororTagUpdate :currentPage="currentPage" :perPage="5" :category="'精品配件'" />
+  </div>
+    </el-card>
+  </el-col>
+  <el-col :span="8" style="margin:5px auto auto auto">
+    <el-card shadow="hover">
+  <div slot="header" class="clearfix">
+    <span><b>维修业务</b></span>
+    <el-button style="float: right; padding: 3px 0" type="text"><a href="/categories/?category=维修">更多...</a></el-button>
+  </div>
+  <div class="text item">
+    <ArticleListCategororTagUpdate :currentPage="currentPage" :perPage="5" :category="'维修'" />
+  </div>
+    </el-card>
+  </el-col>
+  <el-col :span="8" style="margin:5px auto auto auto">
+    <el-card shadow="hover">
+  <div slot="header" class="clearfix">
+    <span><b>会员及客服权益</b></span>
+    <el-button style="float: right; padding: 3px 0" type="text"><a href="/categories/?category=客户权益">更多...</a></el-button>
+  </div>
+  <div class="text item">
+    <ArticleListCategororTagUpdate :currentPage="currentPage" :perPage="5" :category="'客户权益'" />
+  </div>
+    </el-card>
+  </el-col>
+  <el-col :span="8" style="margin:5px auto auto auto">
+    <el-card shadow="hover">
+  <div slot="header" class="clearfix">
+    <span><b>业务报表</b></span>
+    <el-button style="float: right; padding: 3px 0" type="text"><a href="/tags/?tag=业务报表">更多...</a></el-button>
+  </div>
+  <div class="text item">
+    <ArticleListCategororTagUpdate :currentPage="currentPage" :perPage="5" :tag="'业务报表'" />
+  </div>
+    </el-card>
+  </el-col>
+</el-row>
+```
+
+:::
 
 ## 💎 近期计划
+
 近期拟推进完成如下内容：
-- 整理更新问题集锦。
-- 配合经营发展部，更新二手车置换相关内容。
-- 配合资产财务部，更新财务专项专题内容。
+
+- 工作流第一批流程上线。
+- 组织开展会员及客户权益培训。
+- 开发或优化业务报表。
 
 如果您未找到问题的答案或需要的文章，请反馈给我们，我们将尽快予以补充！
 
 <br/>
 
+## 🤝 反馈与交流
 
+如果您在使用系统过程中，遇到任何问题，欢迎通过QQ群反馈交流，以便您能快速解决问题！
+
+也欢迎您对此平台内容提出意见和建议！您的指正，将有助于我们完善！
+
+
+
+<!--
 
 ## ⚡️提示
 
@@ -163,13 +345,4 @@ simplePostListLength: 12 # 简约版文章列表显示的文章数量，默认10
 
 更多更新请查阅：[**更新日志**](./pages/updatelog/)
 
-<br/>
-
-
-## 🤝 反馈与交流
-
-如果您在使用系统过程中，遇到任何问题，欢迎通过QQ群反馈交流，以便您能快速解决问题！
-
-也欢迎您对此平台内容提出意见和建议！您的指正，将有助于我们完善！
-
--->
+<br/>-->

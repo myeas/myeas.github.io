@@ -124,6 +124,47 @@
       <template #mainLeft>
       <!-- 调整卡片列表位置 -->
         <Content class="theme-vdoing-content custom card-box" />
+        <!-- 增加文章列表-->
+        <template v-if="homeData.hidearticlelistblock === 'flase'">
+        <div class="theme-vdoing-content custom card-box"> 
+          <div class="demo-block demo-zh-CN demo-">
+            <div class="demo-content"> 
+
+                <div class="el-row" style="margin-left: -6px; margin-right: -6px;">
+                  <h2>🎉分类文章</h2>
+                  <template v-for="item in homeData.articlelistblock">
+                  <div class="el-col el-col-8" style="padding-left: 6px; padding-right: 6px; margin: 0px auto auto;">
+                    <div class="el-card is-hover-shadow" style="margin-bottom: 5px;">
+                      <div v-if="item.listname && item.listlink" :key="item.listlink" class="el-card__header">
+                        <div class="clearfix">
+                          <span><b>{{ item.listname }}</b></span> 
+                          <button v-if="item.listauto !== 'auto'" :href="item.listlink" type="button" class="el-button el-button--text" style="float: right; padding: 3px 0px;">
+                            <span><a :href="item.listlink">更多...</a></span>
+                          </button>
+                          <button v-else-if="item.listauto === 'auto' && item.categoryortag === 'tag'" type="button" class="el-button el-button--text" style="float: right; padding: 3px 0px;">
+                            <span><a :href="'/tags/?tag='+item.key">更多...</a></span>
+                          </button>
+                          <button v-else-if="item.listauto === 'auto' && item.categoryortag === 'category'" type="button" class="el-button el-button--text" style="float: right; padding: 3px 0px;">
+                            <span><a :href="'/categories/?category='+item.key">更多...</a></span>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="el-card__body" style="height: 360px;"> 
+                        <div class="text item" style="overflow: hidden; text-overflow:ellipsis; white-space: nowrap;margin-left: -1.5rem;">
+                          <!-- <ArticleListPage :currentPage="currentPage" :perPage="item.articleLength" :category="item.key" /> -->
+                          <ArticleListSide v-if="item.categoryortag === 'tag'" :currentPage="currentPage" :perPage="item.articlelistblocklength" :tag="item.key" />
+                          <ArticleListSide v-else-if="item.categoryortag === 'category'" :currentPage="currentPage" :perPage="item.articlelistblocklength" :category="item.key" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  </template>
+                </div>
+
+            </div>
+          </div>
+        </div>
+      </template>
         <!-- 简约版文章列表 -->
         <UpdateArticle
           class="card-box"
@@ -153,6 +194,21 @@
 
       <template v-if="!homeData.hideRightBar" #mainRight>
         <BloggerBar v-if="$themeConfig.blogger" />
+        <!-- <div v-if="homeData.sidearticlelist"> -->
+          <template v-if="homeData.articlelistside" v-for="item in homeData.articlelistside">
+            <div class="artlist-wrapper card-box">
+              <div>
+              <a v-if="item.listauto !== 'auto'" :href="item.listlink" :class="'title iconfont icon-'+item.icon">{{ item.listname }}</a>
+              <a v-else-if="item.listauto === 'auto' && item.categoryortag === 'tag'" :href="'/tags/?tag='+item.key" :class="'title iconfont icon-'+item.icon">{{ item.listname }}</a>
+              <a v-else-if="item.listauto === 'auto' && item.categoryortag === 'category'" :href="'/categories/?category='+item.key" :class="'title iconfont icon-'+item.icon">{{ item.listname }}</a>
+              </div>
+              <div class="artlists">
+                <ArticleListSide v-if="item.categoryortag === 'tag'" :currentPage="currentPage" :perPage="item.articleLength" :tag="item.key" />
+                <ArticleListSide v-else-if="item.categoryortag === 'category'" :currentPage="currentPage" :perPage="item.articleLength" :category="item.key" />
+              </div>
+            </div>
+          </template>
+        <!-- </div> -->
         <CategoriesBar
           v-if="
             $themeConfig.category !== false &&
@@ -496,6 +552,10 @@ export default {
       .pagination
         margin-bottom 3rem  //4
       .theme-vdoing-content
+        h2 
+          color var(--textColor) 
+          font-size 1.6rem 
+          font-weight bolder
         padding 0 2rem
         overflow hidden
         border none
@@ -562,4 +622,61 @@ export default {
   .main-wrapper
     @media (max-width 719px)
       margin-top -1px
+
+
+.artlist-wrapper
+  .title
+    color var(--textColor)
+    opacity 0.9
+    font-size 1.2rem
+    padding 0 0.95rem
+    &::before
+      margin-right 0.3rem
+  .artlists
+    margin-top 0.6rem
+    a
+      display block
+      padding 8px 0.95rem 7px 0.95rem
+      color var(--textColor)
+      opacity 0.8
+      font-size 0.95rem
+      line-height 0.95rem
+      position relative
+      transition all 0.2s
+      border-left 2px solid transparent
+      margin-top -1px
+      overflow hidden
+      white-space nowrap
+      text-overflow ellipsis
+      @media (max-width $MQMobile)
+        font-weight 400
+      &.more
+        // color $accentColor
+      &:not(.active):hover
+        color $accentColor
+        background #f8f8f8
+        border-color $accentColor
+        span
+          opacity 0.8
+      span
+        float right
+        background-color var(--textColor)
+        color var(--mainBg)
+        border-radius 8px
+        padding 0 0.13rem
+        min-width 1rem
+        height 1rem
+        line-height 1rem
+        font-size 0.6rem
+        text-align center
+        opacity 0.6
+        transition opacity 0.3s
+      &.active
+        background $accentColor
+        color var(--mainBg)
+        padding-left 0.8rem
+        border-radius 1px
+        border-color transparent
+.theme-mode-dark .artlist-wrapper .artlist a:not(.active):hover, .theme-mode-read .artlist-wrapper .artlists a:not(.active):hover
+  background var(--customBlockBg)
 </style>

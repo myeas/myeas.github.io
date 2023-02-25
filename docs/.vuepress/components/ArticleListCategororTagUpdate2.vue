@@ -1,12 +1,25 @@
 <template>
-  <div :class="['article-list', { 'no-article-list': isShowArticle }]">
-    <div class="article-title">
+<!--本组可以调用指定单个标签或分类的文章，可适用于任一页面，本组件为1行2列形式-->
+<!-- 
+  参考样式：
+  1、调用分类文章，如下：
+    <CategororTagUpdateArticle3 :currentPage="currentPage" :perPage="20" :category="'分类名称'" />
+  2、调用标签文章，如下：
+    <CategororTagUpdateArticle3 :currentPage="currentPage" :perPage="20" :tag="'标签名称'" />  
+  3、参数说明
+    1）CategororTagUpdateArticle1为一行一列，CategororTagUpdateArticle2为一行两列，CategororTagUpdateArticle3为一行三列；
+    2）currentPage中的“currentPage”，为第几页，一般不动，默认为第一页；
+    3）perPage中的值，必须为数字，即调用多少篇文章；
+    4）:category,调整分类文章；：tag调用标签文章。 
+-->
+  <div class="CategorTagUpdate-article-list2">
+    <!-- <div class="CategorTagUpdate-article-title2">
       <router-link :to="moreArticle || '/archives/'" class="iconfont icon-bi"
         >最近更新</router-link
       >
-    </div>
-    <div class="article-wrapper">
-      <dl v-for="(item, index) in topPublishPosts" :key="index">
+    </div> -->
+    <div class="CategorTagUpdate-article-wrapper2">
+      <dl v-for="(item, index) in sortPosts" :key="index">
         <dd>{{ getNum(index) }}</dd>
         <dt>
           <router-link :to="item.path">
@@ -21,78 +34,115 @@
         </dt>
       </dl>
 
-      <dl>
+      <!-- <dl>
         <dd></dd>
         <dt>
           <router-link :to="moreArticle || '/archives/'" class="more"
             >更多文章></router-link
           >
         </dt>
-      </dl>
+      </dl> -->
     </div>
   </div>
 </template>
 
 <script>
-
 export default {
-  name: 'UpdateArticle',
   props: {
-    length: {
-      type: [String, Number],
-      default: 10
+    category: {
+      type: String,
+      default: ''
     },
-    moreArticle: String
+    tag: {
+      type: String,
+      default: ''
+    },
+    currentPage: {
+      type: Number,
+      default: 1
+    },
+    perPage: {
+      type: Number,
+      default: 10
+    }
   },
   data() {
     return {
-      posts: [],
-      currentPath: ''
+      sortPosts: [],
+      postListOffsetTop: 0
     }
   },
   created() {
-    this.posts = this.$site.pages
-    this.currentPath = this.$page.path
+    this.setPosts()
   },
-  computed: {
-    topPublishPosts() {
-      return this.$sortPostsByDate ? this.$sortPostsByDate.filter(post => {
-        const { path } = post
-        return path !== this.currentPath
-      }).slice(0, this.length) : []
-
+  mounted() {
+    // this.postListOffsetTop = this.getElementToPageTop(this.$refs.postList) - 240
+  },
+  watch: {
+    currentPage() {
+      if (this.$route.query.p != this.currentPage) { // 此判断防止添加相同的路由信息（如浏览器回退时触发的）
+        this.$router.push({
+          query: {
+            ...this.$route.query,
+            p: this.currentPage
+          }
+        })
+      }
+      // setTimeout(() => {
+      //   window.scrollTo({ top: this.postListOffsetTop }) // behavior: 'smooth'
+      // },0)
+      this.setPosts()
     },
-    isShowArticle() {
-      const { frontmatter } = this.$page
-      return !(frontmatter.article !== false)
+    category() {
+      this.setPosts()
+    },
+    tag() {
+      this.setPosts()
     }
   },
   methods: {
+    setPosts() {
+      const currentPage = this.currentPage
+      const perPage = this.perPage
+
+      let posts = []
+      if (this.category) {
+        posts = this.$groupPosts.categories[this.category]
+      } else if (this.tag) {
+        posts = this.$groupPosts.tags[this.tag]
+      } else {
+        posts = this.$sortPosts
+      }
+
+      this.sortPosts = posts.slice((currentPage - 1) * perPage, currentPage * perPage)
+    },
+    // getElementToPageTop(el) {
+    //   if(el && el.parentElement) {
+    //     return this.getElementToPageTop(el.parentElement) + el.offsetTop
+    //   }
+    //   return el.offsetTop
+    // }
     getNum(index) {
       return index < 9 ? '0' + (index + 1) : index + 1
     },
     getDate(item) {
       return item.frontmatter.date ? item.frontmatter.date.split(" ")[0].slice(5, 10) : ''
-    }
-  },
-  watch: {
-    $route() {
-      this.currentPath = this.$page.path
-    }
+    },
   }
 }
 </script>
 
 <style lang='stylus'>
 // @require '../styles/wrapper.styl'
-.article-list
+.CategorTagUpdate-article-list2
   // @extend $wrapper
+  margin-top -1rem 0  //自定义调整上下位置
   padding 1rem 2rem
   @media (max-width $MQNarrow)
     padding 1rem 1.5rem
   &.no-article-list
     display none
-  .article-title
+  .CategorTagUpdate-article-title2
     border-bottom 1px solid var(--borderColor)
     font-size 1.3rem
     padding 1rem
@@ -103,7 +153,7 @@ export default {
       &:before
         margin-right 0.4rem
         font-size 1.1rem
-  .article-wrapper
+  .CategorTagUpdate-article-wrapper2
 
     overflow hidden
     dl
@@ -113,7 +163,7 @@ export default {
       padding 8px 0
       margin 0
       height 45px
-      width 50%
+      width 50%  //100%一行1列，50%一行两行，33.33%
       dd
         font-size 1.1rem
         color #F17229

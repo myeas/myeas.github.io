@@ -1,10 +1,10 @@
 <template>
   <div :class="['article-list', { 'no-article-list': isShowArticle }]">
-    <div class="article-title">
+    <!-- <div class="article-title">
       <router-link :to="moreArticle || '/archives/'" class="iconfont icon-bi"
         >最近更新</router-link
       >
-    </div>
+    </div> -->
     <div class="article-wrapper">
       <dl v-for="(item, index) in topPublishPosts" :key="index">
         <dd>{{ getNum(index) }}</dd>
@@ -21,14 +21,14 @@
         </dt>
       </dl>
 
-      <dl>
+      <!-- <dl>
         <dd></dd>
         <dt>
           <router-link :to="moreArticle || '/archives/'" class="more"
             >更多文章></router-link
           >
         </dt>
-      </dl>
+      </dl> -->
     </div>
   </div>
 </template>
@@ -40,7 +40,7 @@ export default {
   props: {
     length: {
       type: [String, Number],
-      default: 10
+      default: 3
     },
     moreArticle: String
   },
