@@ -125,7 +125,7 @@
       <!-- 调整卡片列表位置 -->
         <Content class="theme-vdoing-content custom card-box" />
         <!-- 增加文章列表-->
-        <template v-if="homeData.hidearticlelistblock === 'flase'">
+        <!-- <template v-if="homeData.hidearticlelistblock === 'flase'">
         <div class="theme-vdoing-content custom card-box"> 
           <div class="demo-block demo-zh-CN demo-">
             <div class="demo-content"> 
@@ -142,18 +142,17 @@
                             <span><a :href="item.listlink">更多...</a></span>
                           </button>
                           <button v-else-if="item.listauto === 'auto' && item.categoryortag === 'tag'" type="button" class="el-button el-button--text" style="float: right; padding: 3px 0px;">
-                            <span><a :href="'/tags/?tag='+item.key">更多...</a></span>
+                            <span><a :href="'/tags/?tag='+item.keyname">更多...</a></span>
                           </button>
                           <button v-else-if="item.listauto === 'auto' && item.categoryortag === 'category'" type="button" class="el-button el-button--text" style="float: right; padding: 3px 0px;">
-                            <span><a :href="'/categories/?category='+item.key">更多...</a></span>
+                            <span><a :href="'/categories/?category='+item.keyname">更多...</a></span>
                           </button>
                         </div>
                       </div>
                       <div class="el-card__body" style="height: 360px;"> 
                         <div class="text item" style="overflow: hidden; text-overflow:ellipsis; white-space: nowrap;margin-left: -1.5rem;">
-                          <!-- <ArticleListPage :currentPage="currentPage" :perPage="item.articleLength" :category="item.key" /> -->
-                          <ArticleListSide v-if="item.categoryortag === 'tag'" :currentPage="currentPage" :perPage="item.articlelistblocklength" :tag="item.key" />
-                          <ArticleListSide v-else-if="item.categoryortag === 'category'" :currentPage="currentPage" :perPage="item.articlelistblocklength" :category="item.key" />
+                          <ArticleListSide v-if="item.categoryortag === 'tag'" :currentPage="currentPage" :perPage="item.articleLength" :tag="item.keyname" />
+                          <ArticleListSide v-else-if="item.categoryortag === 'category'" :currentPage="currentPage" :perPage="item.articleLength" :category="item.keyname" />
                         </div>
                       </div>
                     </div>
@@ -164,7 +163,7 @@
             </div>
           </div>
         </div>
-      </template>
+      </template> -->
         <!-- 简约版文章列表 -->
         <UpdateArticle
           class="card-box"
@@ -197,14 +196,14 @@
         <!-- <div v-if="homeData.sidearticlelist"> -->
           <template v-if="homeData.articlelistside" v-for="item in homeData.articlelistside">
             <div class="artlist-wrapper card-box">
-              <div>
-              <a v-if="item.listauto !== 'auto'" :href="item.listlink" :class="'title iconfont icon-'+item.icon">{{ item.listname }}</a>
-              <a v-else-if="item.listauto === 'auto' && item.categoryortag === 'tag'" :href="'/tags/?tag='+item.key" :class="'title iconfont icon-'+item.icon">{{ item.listname }}</a>
-              <a v-else-if="item.listauto === 'auto' && item.categoryortag === 'category'" :href="'/categories/?category='+item.key" :class="'title iconfont icon-'+item.icon">{{ item.listname }}</a>
+              <div class="title_header">
+              <a v-if="item.listauto !== 'auto'" :href="item.listlink" :class="'iconfont icon-'+item.icon">{{ item.listname }}</a>
+              <a v-else-if="item.listauto === 'auto' && item.categoryortag === 'tag'" :href="'/tags/?tag='+item.keyname" :class="'iconfont icon-'+item.icon">{{ item.listname }}</a>
+              <a v-else-if="item.listauto === 'auto' && item.categoryortag === 'category'" :href="'/categories/?category='+item.keyname" :class="'iconfont icon-'+item.icon">{{ item.listname }}</a>
               </div>
               <div class="artlists">
-                <ArticleListSide v-if="item.categoryortag === 'tag'" :currentPage="currentPage" :perPage="item.articleLength" :tag="item.key" />
-                <ArticleListSide v-else-if="item.categoryortag === 'category'" :currentPage="currentPage" :perPage="item.articleLength" :category="item.key" />
+                <ArticleListSide v-if="item.categoryortag === 'tag'" :currentPage="currentPage" :perPage="item.articleLength" :tag="item.keyname" />
+                <ArticleListSide v-else-if="item.categoryortag === 'category'" :currentPage="currentPage" :perPage="item.articleLength" :category="item.keyname" />
               </div>
             </div>
           </template>
@@ -625,13 +624,20 @@ export default {
 
 
 .artlist-wrapper
-  .title
+  .title_header
+    border-bottom 1px solid var(--borderColor)
     color var(--textColor)
-    opacity 0.9
-    font-size 1.2rem
-    padding 0 0.95rem
-    &::before
-      margin-right 0.3rem
+    padding-bottom 0.3rem
+    // opacity 0.9
+    // font-size 1.2rem
+    // padding 0 0.95rem
+    a
+        color var(--textColor)
+        opacity 0.9
+        font-size 1.2rem
+        padding 0 0.95rem
+        &::before
+          margin-right 0.3rem
   .artlists
     margin-top 0.6rem
     a

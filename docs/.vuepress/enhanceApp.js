@@ -1,6 +1,6 @@
 import LastReadingPopup from './components/LastReadingPopup.vue'
-//import ElementUI from 'element-ui';
-//import 'element-ui/lib/theme-chalk/index.css';
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
 let busuanzi;
 
 export default ({
@@ -10,7 +10,7 @@ export default ({
   siteData, // 站点元数据
   isServer // 当前应用配置是处于 服务端渲染 或 客户端
 }) => {
-//Vue.use(ElementUI)
+Vue.use(ElementUI)
   /**
    * 百度 pv 统计，不使用的可以去掉或注释掉
    */

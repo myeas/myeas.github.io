@@ -87,7 +87,8 @@ export default {
 // @require '../styles/wrapper.styl'
 .article-list
   // @extend $wrapper
-  padding 1rem 2rem
+  margint-top -1rem
+  padding 0rem 0rem 1rem  //原1rem 2rem
   @media (max-width $MQNarrow)
     padding 1rem 1.5rem
   &.no-article-list
@@ -112,7 +113,7 @@ export default {
       display flex
       padding 8px 0
       margin 0
-      height 45px
+      height 25px  //原45
       width 50%
       dd
         font-size 1.1rem

@@ -34,7 +34,7 @@
       </div>
 
       <UpdateArticle
-        :length="3"
+        :length="10"
         :moreArticle="updateBarConfig && updateBarConfig.moreArticle"
         v-if="isShowUpdateBar"
       />

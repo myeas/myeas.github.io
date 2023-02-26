@@ -113,7 +113,7 @@ export default {
       padding 8px 0
       margin 0
       height 45px
-      width 50%
+      width 50%  //一行一列100%，一行两列50%
       dd
         font-size 1.1rem
         color #F17229

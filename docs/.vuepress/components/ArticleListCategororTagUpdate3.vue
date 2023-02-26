@@ -136,8 +136,8 @@ export default {
 // @require '../styles/wrapper.styl'
 .CategorTagUpdate-article-list3
   // @extend $wrapper
-  margin-top -1rem 0  //自定义调整上下位置
-  padding 1rem 2rem
+  margin-top -1rem  //自定义调整上下位置
+  padding 0rem 0rem 1rem //原1rem 2rem
   @media (max-width $MQNarrow)
     padding 1rem 1.5rem
   &.no-article-list
@@ -162,7 +162,7 @@ export default {
       display flex
       padding 8px 0
       margin 0
-      height 45px
+      height 35px  //原45
       width 33.33%  //100%一行1列，50%一行两行，33.33%
       dd
         font-size 1.1rem

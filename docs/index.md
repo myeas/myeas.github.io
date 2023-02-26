@@ -28,49 +28,49 @@ features: # 可选的
     details: 为您答疑解惑，让你从容使用系统
     link: ./pages/faq/
 
-hidearticlelistblock: true  #true不显示文章分组块，flase显示文章分组块
+hidearticlelistblock: flase  #true不显示文章分组块，flase显示文章分组块
 articlelistblocklength: 10
 articlelistblock: # 可选的
   - listname: 整车及二手车 #分类或标签的主题
     listauto: auto             #auto,则与分类或标签的文章对应上，如果非auto则取listlink
     listlink: ./pages/abc1/     #要与分类或标签的文章列表对应上，也可以自行指定
     categoryortag: category    #值只能是category 或 tag
-    key: 整车  #分类或标签
+    keyname: 整车  #分类或标签
     articleLength: 8
     icon: biaoqian1
   - listname: 增值代办
     listauto: auto
     listlink: ./pages/abc2/
     categoryortag: category    #值只能是category 或 tag
-    key: 增值代办
+    keyname: 增值代办
     articleLength: 8
     icon: biaoqian1
   - listname: 精品配件
     listauto: auto
     listlink: ./pages/abc3/
     categoryortag: category    #值只能是category 或 tag
-    key: 精品配件
+    keyname: 精品配件
     articleLength: 8
     icon: biaoqian1
   - listname: 维修 #分类或标签的主题
     listauto: auto             #auto,则与分类或标签的文章对应上，如果非auto则取listlink
     listlink: ./pages/abc1/     #要与分类或标签的文章列表对应上，也可以自行指定
     categoryortag: category    #值只能是category 或 tag
-    key: 维修  #分类或标签
+    keyname: 维修  #分类或标签
     articleLength: 8
     icon: biaoqian1
   - listname: 会员及客户权益
     listauto: auto
     listlink: ./pages/abc2/
     categoryortag: category    #值只能是category 或 tag
-    key: 客户权益
+    keyname: 客户权益
     articleLength: 8
     icon: biaoqian1
   - listname: 业务报表
     listauto: auto
     listlink: ./pages/abc3/
     categoryortag: tag  #值只能是category 或 tag
-    key: 业务报表
+    keyname: 业务报表
     articleLength: 8
     icon: biaoqian1
 
@@ -79,21 +79,21 @@ articlelistside: # 可选的
     listauto: auto             #auto,则与分类或标签的文章对应上，如果非auto则取listlink
     listlink: ./pages/faq/     #要与分类或标签的文章列表对应上，也可以自行指定
     categoryortag: category    #值只能是category 或 tag
-    key: 问题集锦  #分类或标签
+    keyname: 问题集锦  #分类或标签
     articleLength: 20
     icon: biaoqian1
   - listname: 系统安装
     listauto: auto
     listlink: ./categories/?category=系统安装
     categoryortag: category    #值只能是category 或 tag
-    key: 系统安装
+    keyname: 系统安装
     articleLength: 7
     icon: biaoqian1
   - listname: 系统应用检查体系
     listauto: auto
     listlink: ./categories/?category=检查体系
     categoryortag: category    #值只能是category 或 tag
-    key: 检查体系
+    keyname: 检查体系
     articleLength: 7
     icon: biaoqian1
 
@@ -111,7 +111,8 @@ simplePostListLength: 12 # 简约版文章列表显示的文章数量，默认10
 </ClientOnly-->
 
 <ClientOnly>
-  <WebInfo/>
+  <!--WebInfo/-->
+
 </ClientOnly>
 
 
@@ -215,9 +216,17 @@ simplePostListLength: 12 # 简约版文章列表显示的文章数量，默认10
 
 <br/>
 
+## 财务核算规范
+
+<ArticleListCategororTagUpdate2 :currentPage="currentPage" :perPage="6" :category="'财务核算规范'" />
+
+
+
+<!--
+
 ## 🎉指定分类或标签列表测试
 
-<!--ArticleListMore :currentPage="currentPage" :perPage="20" :category="''" /-->
+<ArticleListMore :currentPage="currentPage" :perPage="20" :category="''" />
 
 ### 一行一列：
 
@@ -230,6 +239,10 @@ simplePostListLength: 12 # 简约版文章列表显示的文章数量，默认10
 ### 一行三列：
 
 <ArticleListCategororTagUpdate3 :currentPage="currentPage" :perPage="9" :category="'二手车'" />
+
+-->
+
+<!--
 
 ## 🎉分类文章
 
@@ -255,7 +268,7 @@ simplePostListLength: 12 # 简约版文章列表显示的文章数量，默认10
     <el-button style="float: right; padding: 3px 0" type="text"><a href="/categories/?category=增值代办">更多...</a></el-button>
   </div>
   <div class="text item">
-    <ArticleListCategororTagUpdate :currentPage="currentPage" :perPage="5" :category="'增值代办'" />
+    <ArticleListCategororTagUpdate :currentPage="currentPage" :perPage="5" :category="'二手车'" />
   </div>
     </el-card>
   </el-col>
@@ -266,7 +279,7 @@ simplePostListLength: 12 # 简约版文章列表显示的文章数量，默认10
     <el-button style="float: right; padding: 3px 0" type="text"><a href="/categories/?category=精品配件">更多...</a></el-button>
   </div>
   <div class="text item">
-    <ArticleListCategororTagUpdate :currentPage="currentPage" :perPage="5" :category="'精品配件'" />
+    <ArticleListCategororTagUpdate :currentPage="currentPage" :perPage="5" :category="'二手车'" />
   </div>
     </el-card>
   </el-col>
@@ -277,7 +290,7 @@ simplePostListLength: 12 # 简约版文章列表显示的文章数量，默认10
     <el-button style="float: right; padding: 3px 0" type="text"><a href="/categories/?category=维修">更多...</a></el-button>
   </div>
   <div class="text item">
-    <ArticleListCategororTagUpdate :currentPage="currentPage" :perPage="5" :category="'维修'" />
+    <ArticleListCategororTagUpdate :currentPage="currentPage" :perPage="5" :category="'二手车'" />
   </div>
     </el-card>
   </el-col>
@@ -288,7 +301,7 @@ simplePostListLength: 12 # 简约版文章列表显示的文章数量，默认10
     <el-button style="float: right; padding: 3px 0" type="text"><a href="/categories/?category=客户权益">更多...</a></el-button>
   </div>
   <div class="text item">
-    <ArticleListCategororTagUpdate :currentPage="currentPage" :perPage="5" :category="'客户权益'" />
+    <ArticleListCategororTagUpdate :currentPage="currentPage" :perPage="5" :category="'二手车'" />
   </div>
     </el-card>
   </el-col>
@@ -299,7 +312,7 @@ simplePostListLength: 12 # 简约版文章列表显示的文章数量，默认10
     <el-button style="float: right; padding: 3px 0" type="text"><a href="/tags/?tag=业务报表">更多...</a></el-button>
   </div>
   <div class="text item">
-    <ArticleListCategororTagUpdate :currentPage="currentPage" :perPage="5" :tag="'业务报表'" />
+    <ArticleListCategororTagUpdate :currentPage="currentPage" :perPage="5" :tag="'二手车'" />
   </div>
     </el-card>
   </el-col>
@@ -307,6 +320,8 @@ simplePostListLength: 12 # 简约版文章列表显示的文章数量，默认10
 ```
 
 :::
+
+-->
 
 ## 💎 近期计划
 
