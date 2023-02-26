@@ -139,7 +139,7 @@ export default {
   margin-top -1rem  //自定义调整上下位置
   padding 0rem 0rem 1rem //原1rem 2rem
   @media (max-width $MQNarrow)
-    padding 1rem 1.5rem
+    padding 0rem 0rem 1.5rem  //原1rem 1.5rem
   &.no-article-list
     display none
   .CategorTagUpdate-article-title3
@@ -164,6 +164,10 @@ export default {
       margin 0
       height 35px  //原45
       width 33.33%  //100%一行1列，50%一行两行，33.33%
+      @media (max-width $MQMobile)
+        width 100%    //一行一列100%，一行两行50%
+      @media (max-width $MQMobileNarrow)
+        width 100%    //一行一列100%，一行两行50%
       dd
         font-size 1.1rem
         color #F17229

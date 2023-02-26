@@ -90,7 +90,7 @@ export default {
   margint-top -1rem
   padding 0rem 0rem 1rem  //原1rem 2rem
   @media (max-width $MQNarrow)
-    padding 1rem 1.5rem
+    padding 0rem 0rem 1.5rem
   &.no-article-list
     display none
   .article-title
