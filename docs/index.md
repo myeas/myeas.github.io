@@ -220,7 +220,11 @@ simplePostListLength: 12 # 简约版文章列表显示的文章数量，默认10
 
 <ArticleListCategororTagUpdate2 :currentPage="currentPage" :perPage="6" :category="'财务核算规范'" />
 
+::: right
 
+[更多文章](/categories/?category=财务核算规范)>
+
+:::
 
 <!--
 
