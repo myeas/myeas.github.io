@@ -162,7 +162,11 @@ export default {
       display flex
       padding 8px 0
       margin 0
-      height 45px
+      height 35px  //原45
+      @media (max-width $MQMobile)
+        height 45px  //原45
+      @media (max-width $MQMobileNarrow)
+        height 45px  //原45
       width 100%  //100%一行1列，50%一行两行，33.33%
       dd
         font-size 1.1rem

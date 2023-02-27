@@ -189,7 +189,7 @@ export default {
       a
         color var(--textColor)
         &:hover
-          color $accentColor
+          color #11A8CD //原 $accentColor
       h2
         margin 0.5rem 0
         font-size 1.4rem

@@ -28,49 +28,49 @@ features: # 可选的
     details: 为您答疑解惑，让你从容使用系统
     link: ./pages/faq/
 
-hidearticlelistblock: flase  #true不显示文章分组块，flase显示文章分组块
+hidearticlelistblock: true  #true不显示文章分组块，flase显示文章分组块
 articlelistblocklength: 10
 articlelistblock: # 可选的
   - listname: 整车及二手车 #分类或标签的主题
     listauto: auto             #auto,则与分类或标签的文章对应上，如果非auto则取listlink
     listlink: ./pages/abc1/     #要与分类或标签的文章列表对应上，也可以自行指定
     categoryortag: category    #值只能是category 或 tag
-    keyname: 整车  #分类或标签
+    keyname: 整车及二手车管理  #分类或标签
     articleLength: 8
     icon: biaoqian1
   - listname: 增值代办
     listauto: auto
     listlink: ./pages/abc2/
     categoryortag: category    #值只能是category 或 tag
-    keyname: 增值代办
+    keyname: 整车及二手车管理
     articleLength: 8
     icon: biaoqian1
   - listname: 精品配件
     listauto: auto
     listlink: ./pages/abc3/
     categoryortag: category    #值只能是category 或 tag
-    keyname: 精品配件
+    keyname: 整车及二手车管理
     articleLength: 8
     icon: biaoqian1
   - listname: 维修 #分类或标签的主题
     listauto: auto             #auto,则与分类或标签的文章对应上，如果非auto则取listlink
     listlink: ./pages/abc1/     #要与分类或标签的文章列表对应上，也可以自行指定
     categoryortag: category    #值只能是category 或 tag
-    keyname: 维修  #分类或标签
+    keyname: 整车及二手车管理  #分类或标签
     articleLength: 8
     icon: biaoqian1
   - listname: 会员及客户权益
     listauto: auto
     listlink: ./pages/abc2/
     categoryortag: category    #值只能是category 或 tag
-    keyname: 客户权益
+    keyname: 整车及二手车管理
     articleLength: 8
     icon: biaoqian1
   - listname: 业务报表
     listauto: auto
     listlink: ./pages/abc3/
     categoryortag: tag  #值只能是category 或 tag
-    keyname: 业务报表
+    keyname: 库存核算
     articleLength: 8
     icon: biaoqian1
 
@@ -87,14 +87,21 @@ articlelistside: # 可选的
     listlink: ./categories/?category=系统安装
     categoryortag: category    #值只能是category 或 tag
     keyname: 系统安装
-    articleLength: 7
+    articleLength: 5
     icon: biaoqian1
   - listname: 系统应用检查体系
     listauto: auto
     listlink: ./categories/?category=检查体系
     categoryortag: category    #值只能是category 或 tag
     keyname: 检查体系
-    articleLength: 7
+    articleLength: 10
+    icon: biaoqian1
+  - listname: 审批工作流
+    listauto: auto
+    listlink: ./categories/?category=审批工作流
+    categoryortag: category    #值只能是category 或 tag
+    keyname: 审批工作流
+    articleLength: 10
     icon: biaoqian1
 
 #文章列表显示方式: detailed 默认，显示详细版文章列表（包括作者、分类、标签、摘要、分页等）| simple => 显示简约版文章列表（仅标题和日期）| none 不显示文章列表
@@ -128,9 +135,29 @@ simplePostListLength: 12 # 简约版文章列表显示的文章数量，默认10
 </style>
 <br/>
 
-## 🎉公告通知
+## 🎉公告通知📢
 
-- 请各门店抓紧时间上报工作流角色对应的用户清单，请于2023年2月28月前完成上报。
+::: warning 重要通知📢
+
+近期拟对各店**客户权益**进行调研，拟了解如下事项，请各店积极配合做好准备！
+
+客户权益包括但不限于：`预收款`，`优惠券`，`会员储值`、`会员套餐`、`会员积分`、`会员折扣`、`会员等级`等。
+
+- 客户权益的形式（储值、基金、优惠券、积分等）
+- 客户权益的类型（工时代金券、材料代金券、项目代金券等）
+- 政策支持（自店政策、厂家政策、异业联盟等）
+- 客户权益发放流程（立项、审批、发放等流程）
+- 客户权益使用流程（台账、核销机制等流程）
+- 监督流程（赔付率、流失率等）
+- 历史数据核对（去年/今年发放金额、去年/今年使用金额、去年/今年有效余额）
+
+:::
+
+## 🎉近期推进工作相关文档
+
+- #### 单据审批工作流：[单据审批工作流](/pages/flow-601001/)
+
+- #### 金蝶系统应用质量检查体系：[金蝶系统应用质量检查体系](/categories/?category=检查体系)
 
 ## 🎉最近更新
 
@@ -152,16 +179,16 @@ simplePostListLength: 12 # 简约版文章列表显示的文章数量，默认10
 #  bgColor: '#5B8982'  #'rgb(221, 237, 234)'
 #  textColor: '#ffffff'  # '#2A3344'
 - name: 科目及辅助规范
-  desc: 🚀1️⃣确保会计科目及辅助账符合上级管理体系
+  desc: 🚀1️⃣确保会计科目及辅助账符合上级管理要求及核算规范
   link: ./pages/special-102010/
   bgColor: '#5B8982'  #'rgb(221, 237, 234)'
   textColor: '#ffffff'  # '#2A3344'
-- name: 存货账账一致
+- name: 存货账账相符一致
   desc: 🚀2️⃣确保业务和财务账一致,月末结账前必须核对一致
   link: ./pages/special-104011/
   bgColor: '#D47655'  #'rgb(221, 237, 234)'
   textColor: '#E1F8E1'
-#- name: 存货账实一致
+#- name: 存货账实相符一致
 #  desc: 🚀3️⃣确保业务数据与实际相符，如挂单、核销、结算、价格、明细等
 #  link: ./pages/special-104012/
 #  bgColor: '#42586E' #'rgb(221, 237, 234)'
@@ -202,7 +229,7 @@ simplePostListLength: 12 # 简约版文章列表显示的文章数量，默认10
   bgColor: '#D47655'  #'rgb(221, 237, 234)'
   textColor: '#E1F8E1'
 - name: 应收系统管理
-  desc: 🚀8️⃣确保会计科目及辅助账符合上级管理体系
+  desc: 🚀8️⃣预收账款、合同负债、预存开票、结算处理，以及与业务衔接的规范
   link: ./pages/special-102022/
   bgColor: '#5B8982'  #'rgb(221, 237, 234)'
   textColor: '#ffffff'  # '#2A3344'
@@ -234,15 +261,15 @@ simplePostListLength: 12 # 简约版文章列表显示的文章数量，默认10
 
 ### 一行一列：
 
-<ArticleListCategororTagUpdate1 :currentPage="currentPage" :perPage="5" :category="'二手车'" />
+<ArticleListCategororTagUpdate1 :currentPage="currentPage" :perPage="5" :category="'检查体系'" />
 
 ### 一行两列：
 
-<ArticleListCategororTagUpdate2 :currentPage="currentPage" :perPage="6" :category="'二手车'" />
+<ArticleListCategororTagUpdate2 :currentPage="currentPage" :perPage="6" :category="'检查体系'" />
 
 ### 一行三列：
 
-<ArticleListCategororTagUpdate3 :currentPage="currentPage" :perPage="9" :category="'二手车'" />
+<ArticleListCategororTagUpdate3 :currentPage="currentPage" :perPage="9" :category="'检查体系'" />
 
 -->
 
@@ -261,7 +288,7 @@ simplePostListLength: 12 # 简约版文章列表显示的文章数量，默认10
     <el-button style="float: right; padding: 3px 0" type="text"><a href="/categories/?category=整车管理">更多...</a></el-button>
   </div>
   <div class="text item">
-    <ArticleListCategororTagUpdate :currentPage="currentPage" :perPage="5" :category="'二手车'" />
+    <ArticleListCategororTagUpdate :currentPage="currentPage" :perPage="5" :category="'整车及二手车管理'" />
   </div>
     </el-card>
   </el-col>
@@ -272,7 +299,7 @@ simplePostListLength: 12 # 简约版文章列表显示的文章数量，默认10
     <el-button style="float: right; padding: 3px 0" type="text"><a href="/categories/?category=增值代办">更多...</a></el-button>
   </div>
   <div class="text item">
-    <ArticleListCategororTagUpdate :currentPage="currentPage" :perPage="5" :category="'二手车'" />
+    <ArticleListCategororTagUpdate :currentPage="currentPage" :perPage="5" :category="'整车及二手车管理'" />
   </div>
     </el-card>
   </el-col>
@@ -283,7 +310,7 @@ simplePostListLength: 12 # 简约版文章列表显示的文章数量，默认10
     <el-button style="float: right; padding: 3px 0" type="text"><a href="/categories/?category=精品配件">更多...</a></el-button>
   </div>
   <div class="text item">
-    <ArticleListCategororTagUpdate :currentPage="currentPage" :perPage="5" :category="'二手车'" />
+    <ArticleListCategororTagUpdate :currentPage="currentPage" :perPage="5" :category="'整车及二手车管理'" />
   </div>
     </el-card>
   </el-col>
@@ -294,7 +321,7 @@ simplePostListLength: 12 # 简约版文章列表显示的文章数量，默认10
     <el-button style="float: right; padding: 3px 0" type="text"><a href="/categories/?category=维修">更多...</a></el-button>
   </div>
   <div class="text item">
-    <ArticleListCategororTagUpdate :currentPage="currentPage" :perPage="5" :category="'二手车'" />
+    <ArticleListCategororTagUpdate :currentPage="currentPage" :perPage="5" :category="'整车及二手车管理'" />
   </div>
     </el-card>
   </el-col>
@@ -305,7 +332,7 @@ simplePostListLength: 12 # 简约版文章列表显示的文章数量，默认10
     <el-button style="float: right; padding: 3px 0" type="text"><a href="/categories/?category=客户权益">更多...</a></el-button>
   </div>
   <div class="text item">
-    <ArticleListCategororTagUpdate :currentPage="currentPage" :perPage="5" :category="'二手车'" />
+    <ArticleListCategororTagUpdate :currentPage="currentPage" :perPage="5" :category="'整车及二手车管理'" />
   </div>
     </el-card>
   </el-col>
@@ -316,7 +343,7 @@ simplePostListLength: 12 # 简约版文章列表显示的文章数量，默认10
     <el-button style="float: right; padding: 3px 0" type="text"><a href="/tags/?tag=业务报表">更多...</a></el-button>
   </div>
   <div class="text item">
-    <ArticleListCategororTagUpdate :currentPage="currentPage" :perPage="5" :tag="'二手车'" />
+    <ArticleListCategororTagUpdate :currentPage="currentPage" :perPage="5" :tag="'库存核算'" />
   </div>
     </el-card>
   </el-col>
@@ -326,6 +353,254 @@ simplePostListLength: 12 # 简约版文章列表显示的文章数量，默认10
 :::
 
 -->
+
+::: danger 特别提醒
+
+以下版块内容，在调整丰富中，敬请期待！
+
+:::
+
+## 🎉财务版块分类文章
+
+::: demo
+
+```
+<div class="el-row">
+  <div class="el-col el-col-8" style="padding-left: 6px; padding-right: 6px; margin:5px auto 5px;">
+    <div class="el-card is-hover-shadow" style="background:var(--customBlockBg)">
+  		<div class="el-card__header">
+  			<div class="clearfix">
+    		<span title="凭证、财务报表、NCC"><b>总账及NCC管理</b></span>
+    		<button type="button" class="el-button el-button--text" style="float: right; padding: 3px 0px;"><span><a href="/categories/?category=总账及NCC接口" title="凭证、财务报表、NCC">更多...</a></span>
+    		</button>
+    		</div>
+  		</div>
+
+  		<div class="el-card__body" style="height:448px;margin:-30px auto -20px;">          	
+            <div class="text item" style="margin-left:-20px;">            
+                <ArticleListCategororTagUpdate :currentPage="currentPage" :perPage="8" :category="'总账及NCC接口'" />
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="el-col el-col-8" style="padding-left: 6px; padding-right: 6px; margin:5px auto 5px;">
+    <div class="el-card is-hover-shadow">
+  		<div class="el-card__header">
+  			<div class="clearfix">
+    		<span title="现金日记账、银行日记账、银行存款对账、余额调节"><b>出纳管理</b></span>
+    		<button type="button" class="el-button el-button--text" style="float: right; padding: 3px 0px;"><span><a href="/categories/?category=出纳管理" title="现金日记账、银行日记账、银行存款对账、余额调节">更多...</a></span>
+    		</button>
+    		</div>
+  		</div>
+
+  		<div class="el-card__body" style="height:448px;margin:-30px auto -20px;">          	
+            <div class="text item" style="margin-left:-20px;">
+                <ArticleListCategororTagUpdate :currentPage="currentPage" :perPage="8" :category="'出纳管理'" />
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="el-col el-col-8" style="padding-left: 6px; padding-right: 6px; margin:5px auto 5px;">
+    <div class="el-card is-hover-shadow">
+  		<div class="el-card__header">
+  			<div class="clearfix">
+    		<span title="应收、收款、应付、付款、结算等往来管理"><b>应收应付管理</b></span>
+    		<button type="button" class="el-button el-button--text" style="float: right; padding: 3px 0px;"><span><a href="/categories/?category=应收应付管理" title="应收、收款、应付、付款、结算等往来管理">更多...</a></span>
+    		</button>
+    		</div>
+  		</div>
+
+  		<div class="el-card__body" style="height:448px;margin:-30px auto -20px;">          	
+            <div class="text item" style="margin-left:-20px;">
+                <ArticleListCategororTagUpdate :currentPage="currentPage" :perPage="8" :category="'应收应付管理'" />
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="el-col el-col-8" style="padding-left: 6px; padding-right: 6px; margin:5px auto 5px;">
+    <div class="el-card is-hover-shadow">
+  		<div class="el-card__header">
+  			<div class="clearfix">
+    		<span title="固定资产新增、变更、折旧、盘点等"><b>固定资产管理</b></span>
+    		<button type="button" class="el-button el-button--text" style="float: right; padding: 3px 0px;"><span><a href="/categories/?category=固定资产管理" title="固定资产新增、变更、折旧、盘点等">更多...</a></span>
+    		</button>
+    		</div>
+  		</div>
+
+  		<div class="el-card__body" style="height:448px;margin:-30px auto -20px;">          	
+            <div class="text item" style="margin-left:-20px;">
+                <ArticleListCategororTagUpdate :currentPage="currentPage" :perPage="8" :category="'固定资产管理'" />
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="el-col el-col-8" style="padding-left: 6px; padding-right: 6px; margin:5px auto 5px;">
+    <div class="el-card is-hover-shadow">
+  		<div class="el-card__header">
+  			<div class="clearfix">
+    		<span title="核算整车、精品配件、辅料等的成本及采购核销、销售核销"><b>存货核算</b></span>
+    		<button type="button" class="el-button el-button--text" style="float: right; padding: 3px 0px;"><span><a href="/categories/?category=存货核算" title="核算整车、精品配件、辅料等的成本及采购核销、销售核销">更多...</a></span>
+    		</button>
+    		</div>
+  		</div>
+
+  		<div class="el-card__body" style="height:448px;margin:-30px auto -20px;">          	
+            <div class="text item" style="margin-left:-20px;">
+                <ArticleListCategororTagUpdate :currentPage="currentPage" :perPage="8" :category="'存货核算'" />
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="el-col el-col-8" style="padding-left: 6px; padding-right: 6px; margin:5px auto 5px;">
+    <div class="el-card is-hover-shadow">
+  		<div class="el-card__header">
+  			<div class="clearfix">
+    		<span title="各财务领域管理报表"><b>财务管理报表</b></span>
+    		<button type="button" class="el-button el-button--text" style="float: right; padding: 3px 0px;"><span><a href="/categories/?category=财务管理报表" title="各财务领域管理报表">更多...</a></span>
+    		</button>
+    		</div>
+  		</div>
+
+  		<div class="el-card__body" style="height:448px;margin:-30px auto -20px;">          	
+            <div class="text item" style="margin-left:-20px;">
+                <ArticleListCategororTagUpdate :currentPage="currentPage" :perPage="8" :category="'财务管理报表'" />
+            </div>
+        </div>
+    </div>
+  </div>
+
+</div>
+```
+
+:::
+
+
+
+## 🎉销售结算及客户权益
+
+> 本栏目包括：前台销售结算、预收款账户、优惠券、会员储值、会员套餐、会员折扣、会员积分等。
+
+<ArticleListCategororTagUpdate2 :currentPage="currentPage" :perPage="10" :category="'客户权益'" />
+
+::: right
+
+[更多文章](/categories/?category=客户权益)
+
+:::
+
+## 🎉业务版块分类文章
+
+::: demo
+
+```
+<div class="el-row">
+  <div class="el-col el-col-8" style="padding-left: 6px; padding-right: 6px; margin:5px auto 5px;">
+    <div class="el-card is-hover-shadow">
+  		<div class="el-card__header">
+  			<div class="clearfix">
+    		<span title="新车及二手车的采购、销售、库存及核算"><b>整车及二手车</b></span>
+    		<button type="button" class="el-button el-button--text" style="float: right; padding: 3px 0px;"><span><a href="/categories/?category=整车管理" title="新车及二手车的采购、销售、库存及核算">更多...</a></span>
+    		</button>
+    		</div>
+  		</div>
+  		<!--div style="margin:20px 20px auto 20px;">🎉新车及二手车的采购、销售、库存及核算</div-->
+  		<div class="el-card__body" style="height:448px;margin:-30px auto -20px;">          	
+            <div class="text item" style="margin-left:-20px;">            
+                <ArticleListCategororTagUpdate :currentPage="currentPage" :perPage="8" :category="'整车及二手车管理'" />
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="el-col el-col-8" style="padding-left: 6px; padding-right: 6px; margin:5px auto 5px;">
+    <div class="el-card is-hover-shadow">
+  		<div class="el-card__header">
+  			<div class="clearfix">
+    		<span title="代办服务、上牌、保险、按揭、延保、商业产品"><b>增值代办业务</b></span>
+    		<button type="button" class="el-button el-button--text" style="float: right; padding: 3px 0px;"><span><a href="/categories/?category=增值代办管理" title="代办服务、上牌、保险、按揭、延保、商业产品">更多...</a></span>
+    		</button>
+    		</div>
+  		</div>
+  		<!--div style="margin:20px 20px auto 20px;">🎉代办服务、上牌、保险、按揭、延保、商业产品</div-->
+  		<div class="el-card__body" style="height:448px;margin:-30px auto -20px;">          	
+            <div class="text item" style="margin-left:-20px;">
+                <ArticleListCategororTagUpdate :currentPage="currentPage" :perPage="8" :category="'增值代办管理'" />
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="el-col el-col-8" style="padding-left: 6px; padding-right: 6px; margin:5px auto 5px;">
+    <div class="el-card is-hover-shadow">
+  		<div class="el-card__header">
+  			<div class="clearfix">
+    		<span title="精品、配件、辅料等的采购、销售、库存及核算以及精品加装"><b>精品配件管理</b></span>
+    		<button type="button" class="el-button el-button--text" style="float: right; padding: 3px 0px;"><span><a href="/categories/?category=精品配件管理" title="精品、配件、辅料等的采购、销售、库存及核算以及精品加装">更多...</a></span>
+    		</button>
+    		</div>
+  		</div>
+  		<!--div style="margin:20px 20px auto 20px;">🎉精品、配件、辅料等的采购、销售、库存及核算以及精品加装</div-->
+  		<div class="el-card__body" style="height:448px;margin:-30px auto -20px;">          	
+            <div class="text item" style="margin-left:-20px;">
+                <ArticleListCategororTagUpdate :currentPage="currentPage" :perPage="8" :category="'精品配件管理'" />
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="el-col el-col-8" style="padding-left: 6px; padding-right: 6px; margin:5px auto 5px;">
+    <div class="el-card is-hover-shadow">
+  		<div class="el-card__header">
+  			<div class="clearfix">
+    		<span title="一般维修、客户保养、厂家保养、索赔、理赔、维修预约等"><b>维修管理</b></span>
+    		<button type="button" class="el-button el-button--text" style="float: right; padding: 3px 0px;"><span><a href="/categories/?category=维修管理" title="一般维修、客户保养、厂家保养、索赔、理赔、维修预约等">更多...</a></span>
+    		</button>
+    		</div>
+  		</div>
+  		<!--div style="margin:20px 20px auto 20px;">🎉一般维修、客户保养、厂家保养、索赔、理赔、维修预约等</div-->
+  		<div class="el-card__body" style="height:448px;margin:-30px auto -20px;">          	
+            <div class="text item" style="margin-left:-20px;">
+                <ArticleListCategororTagUpdate :currentPage="currentPage" :perPage="8" :category="'维修管理'" />
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="el-col el-col-8" style="padding-left: 6px; padding-right: 6px; margin:5px auto 5px;">
+    <div class="el-card is-hover-shadow">
+  		<div class="el-card__header">
+  			<div class="clearfix">
+    		<span title="新车销售/售后维修回访，保险/保养/保修/生日提醒，回访登记，流失，满意度，预约等"><b>客服管理</b></span>
+    		<button type="button" class="el-button el-button--text" style="float: right; padding: 3px 0px;"><span><a href="/categories/?category=客服管理" title="新车销售/售后维修回访，保险/保养/保修/生日提醒，回访登记，流失，满意度，预约等">更多...</a></span>
+    		</button>
+    		</div>
+  		</div>
+  		<!--div style="margin:20px 20px auto 20px;">🎉新车销售/售后维修回访，保险/保养/保修/生日提醒，回访登记，流失，满意度，预约等</div-->
+  		<div class="el-card__body" style="height:448px;margin:-30px auto -20px;">          	
+            <div class="text item" style="margin-left:-20px;">
+                <ArticleListCategororTagUpdate :currentPage="currentPage" :perPage="8" :category="'客服管理'" />
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="el-col el-col-8" style="padding-left: 6px; padding-right: 6px; margin:5px auto 5px;">
+    <div class="el-card is-hover-shadow">
+  		<div class="el-card__header">
+  			<div class="clearfix">
+    		<span title="各业务版块管理报表"><b>业务管理报表</b></span>
+    		<button type="button" class="el-button el-button--text" style="float: right; padding: 3px 0px;"><span><a href="/categories/?category=业务管理报表" title="各业务版块管理报表">更多...</a></span>
+    		</button>
+    		</div>
+  		</div>
+  		<!--div style="margin:20px 20px auto 20px;">🎉新车、二手车的采购、销售、库存及核算</div-->
+  		<div class="el-card__body" style="height:448px;margin:-30px auto -20px;">          	
+            <div class="text item" style="margin-left:-20px;">
+                <ArticleListCategororTagUpdate :currentPage="currentPage" :perPage="8" :category="'业务管理报表'" />
+            </div>
+        </div>
+    </div>
+  </div>
+
+</div>
+```
+
+:::
 
 ## 💎 近期计划
 

@@ -125,7 +125,7 @@
       <!-- 调整卡片列表位置 -->
         <Content class="theme-vdoing-content custom card-box" />
         <!-- 增加文章列表-->
-        <!-- <template v-if="homeData.hidearticlelistblock === 'flase'">
+        <template v-if="homeData.hidearticlelistblock === 'flase'">
         <div class="theme-vdoing-content custom card-box"> 
           <div class="demo-block demo-zh-CN demo-">
             <div class="demo-content"> 
@@ -151,8 +151,12 @@
                       </div>
                       <div class="el-card__body" style="height: 360px;"> 
                         <div class="text item" style="overflow: hidden; text-overflow:ellipsis; white-space: nowrap;margin-left: -1.5rem;">
-                          <ArticleListSide v-if="item.categoryortag === 'tag'" :currentPage="currentPage" :perPage="item.articleLength" :tag="item.keyname" />
-                          <ArticleListSide v-else-if="item.categoryortag === 'category'" :currentPage="currentPage" :perPage="item.articleLength" :category="item.keyname" />
+                          <template v-if="item.categoryortag === 'tag'" >
+                          <ArticleListCategororTagUpdate :currentPage="currentPage" :perPage="item.articleLength" :tag="item.keyname" />
+                          </template>
+                          <template v-else-if="item.categoryortag === 'category'" >
+                          <ArticleListCategororTagUpdate :currentPage="currentPage" :perPage="item.articleLength" :category="item.keyname" /> 
+                          </template>
                         </div>
                       </div>
                     </div>
@@ -163,7 +167,7 @@
             </div>
           </div>
         </div>
-      </template> -->
+      </template>
         <!-- 简约版文章列表 -->
         <UpdateArticle
           class="card-box"
