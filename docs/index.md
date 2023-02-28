@@ -523,7 +523,7 @@ simplePostListLength: 12 # 简约版文章列表显示的文章数量，默认10
 ::: demo
 
 ```
-<div class="el-row">
+<div class="el-row" id="cust-rowcol">
   <div class="el-col el-col-8" style="padding-left: 6px; padding-right: 6px; margin:5px auto 5px;">
     <div class="el-card is-hover-shadow">
   		<div class="el-card__header">
@@ -628,6 +628,36 @@ simplePostListLength: 12 # 简约版文章列表显示的文章数量，默认10
   </div>
 
 </div>
+<style>
+#cust-rowcol
+    .el-col-8{
+            width:33.33333%
+        }
+    @media only screen and (max-width:1100px){
+    	#cust-rowcol
+            .el-col-8{
+                width:50%
+            }
+    }
+    @media only screen and (min-width:720px) and (max-width:799px){
+    	#cust-rowcol
+        .el-col-8{
+                width:100%
+            }
+    }
+    @media only screen and (min-width:560px) and (max-width:719px){
+    	#cust-rowcol
+            .el-col-8{
+                width:50%
+            }
+    }
+    @media only screen and (max-width:559px){
+    	#cust-rowcol
+            .el-col-8{
+                width:100%
+            }
+    }
+</style>
 ```
 
 :::
