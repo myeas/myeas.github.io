@@ -281,7 +281,7 @@ simplePostListLength: 12 # 简约版文章列表显示的文章数量，默认10
 
 ```
 <el-row :gutter="12">
-  <el-col :span="8" style="margin:-10px auto auto auto">
+  <el-col :span="8" style="@media (max-width $MQMobile):100%;margin:-10px auto auto auto;">
     <el-card shadow="hover">
   <div slot="header" class="clearfix">
     <span><b>整车及二手车</b></span>
@@ -370,7 +370,7 @@ simplePostListLength: 12 # 简约版文章列表显示的文章数量，默认10
     <div class="el-card is-hover-shadow" style="background:var(--customBlockBg)">
   		<div class="el-card__header">
   			<div class="clearfix">
-    		<span title="凭证、财务报表、NCC"><b>总账及NCC管理</b></span>
+    		<span title="凭证、财务报表、NCC" style="color:$accentColor"><b>总账及NCC管理</b></span>
     		<button type="button" class="el-button el-button--text" style="float: right; padding: 3px 0px;"><span><a href="/categories/?category=总账及NCC接口" title="凭证、财务报表、NCC">更多...</a></span>
     		</button>
     		</div>

@@ -139,7 +139,7 @@ export default {
   margin-top -1rem 0  //自定义调整上下位置
   padding 1rem 0rem
   @media (max-width $MQNarrow)
-    padding 1rem 1.5rem
+    padding 1rem 0rem
   &.no-article-list
     display none
   .CategorTagUpdate-article-title
