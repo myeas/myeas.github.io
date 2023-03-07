@@ -1,11 +1,11 @@
 <template>
-  <div :class="['article-list', { 'no-article-list': isShowArticle }]">
+  <div :class="['article-list2', { 'no-article-list': isShowArticle }]">
     <!-- <div class="article-title">
       <router-link :to="moreArticle || '/archives/'" class="iconfont icon-bi"
         >最近更新</router-link
       >
     </div> -->
-    <div class="article-wrapper">
+    <div class="article-wrapper2">
       <dl v-for="(item, index) in topPublishPosts" :key="index">
         <dd>{{ getNum(index) }}</dd>
         <dt>
@@ -85,7 +85,7 @@ export default {
 
 <style lang='stylus'>
 // @require '../styles/wrapper.styl'
-.article-list
+.article-list2
   // @extend $wrapper
   margint-top -1rem
   padding 0rem 0rem 1rem  //原1rem 2rem
@@ -104,7 +104,7 @@ export default {
       &:before
         margin-right 0.4rem
         font-size 1.1rem
-  .article-wrapper
+  .article-wrapper2
 
     overflow hidden
     dl

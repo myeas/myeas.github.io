@@ -112,8 +112,16 @@ export default {
       display flex
       padding 8px 0
       margin 0
-      height 45px
-      width 50%  //一行一列100%，一行两列50%
+      height 35px  //原45
+      @media (max-width $MQMobile)
+        height 45px  //原45
+      @media (max-width $MQMobileNarrow)
+        height 45px  //原45
+      width 50%
+      @media (max-width $MQMobile)
+        width 100%    //一行一列100%，一行两行50%
+      @media (max-width $MQMobileNarrow)
+        width 100%    //一行一列100%，一行两行50%
       dd
         font-size 1.1rem
         color #F17229

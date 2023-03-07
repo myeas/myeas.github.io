@@ -136,7 +136,7 @@ export default {
 // @require '../styles/wrapper.styl'
 .CategorTagUpdate-article-list2
   // @extend $wrapper
-  margin-top -1rem  //自定义调整上下位置
+  //margin-top -1rem  //自定义调整上下位置
   padding 0rem 0rem 1rem  //原1rem 2rem
   @media (max-width $MQNarrow)
     padding 0rem 0rem 1.5rem  //原1rem 1.5rem

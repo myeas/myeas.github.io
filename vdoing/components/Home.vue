@@ -218,12 +218,12 @@
             $categoriesAndTags.categories.length
           "
           :categoriesData="$categoriesAndTags.categories"
-          :length="10"
+          :length="30"
         />
         <TagsBar
           v-if="$themeConfig.tag !== false && $categoriesAndTags.tags.length"
           :tagsData="$categoriesAndTags.tags"
-          :length="30"
+          :length="60"
         />
         <div
           class="custom-html-box card-box"

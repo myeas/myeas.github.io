@@ -1,6 +1,6 @@
 // 工具导航栏
 module.exports =  {
-  text: '整车', link: '/list/index.html#整车管理', items: [
+  text: '整车及二手车', link: '/list/index.html#整车管理', items: [
     {
       text: '整车-基础', items: [
         { text: '基础数据', link: '/list/index.html#整车管理-基础数据' },  
@@ -14,6 +14,10 @@ module.exports =  {
         { text: '销售管理', link: '/list/index.html#整车管理-销售管理' },
         { text: '库存管理', link: '/list/index.html#整车管理-库存管理' },
         { text: '内部调拨', link: '/list/index.html#整车管理-集团内调拨' },
+      ]
+    },
+    {
+      text: '二手车-业务', items: [
         { text: '二手车置换', link: '/list/index.html#二手车置换' },
       ]
     },

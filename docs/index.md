@@ -93,7 +93,7 @@ articlelistside: # 可选的
     listauto: auto
     listlink: ./categories/?category=检查体系
     categoryortag: category    #值只能是category 或 tag
-    keyname: 检查体系
+    keyname: 系统应用检查体系
     articleLength: 10
     icon: biaoqian1
   - listname: 审批工作流
@@ -245,7 +245,7 @@ simplePostListLength: 12 # 简约版文章列表显示的文章数量，默认10
 
 ## 财务核算规范
 
-<ArticleListCategororTagUpdate2 :currentPage="currentPage" :perPage="6" :category="'财务核算规范'" />
+<ArticleListCategororTagUpdate2 :currentPage="currentPage" :perPage="6" :tag="'财务核算规范'" />
 
 ::: right
 
@@ -261,15 +261,15 @@ simplePostListLength: 12 # 简约版文章列表显示的文章数量，默认10
 
 ### 一行一列：
 
-<ArticleListCategororTagUpdate1 :currentPage="currentPage" :perPage="5" :category="'检查体系'" />
+<ArticleListCategororTagUpdate1 :currentPage="currentPage" :perPage="5" :category="'系统应用检查体系'" />
 
 ### 一行两列：
 
-<ArticleListCategororTagUpdate2 :currentPage="currentPage" :perPage="6" :category="'检查体系'" />
+<ArticleListCategororTagUpdate2 :currentPage="currentPage" :perPage="6" :category="'系统应用检查体系'" />
 
 ### 一行三列：
 
-<ArticleListCategororTagUpdate3 :currentPage="currentPage" :perPage="9" :category="'检查体系'" />
+<ArticleListCategororTagUpdate3 :currentPage="currentPage" :perPage="9" :category="'系统应用检查体系'" />
 
 -->
 
@@ -360,163 +360,7 @@ simplePostListLength: 12 # 简约版文章列表显示的文章数量，默认10
 
 :::
 
-## 🎉财务版块分类文章
 
-::: demo
-
-```
-<div class="el-row" id="cust-rowcol">
-  <div class="el-col el-col-8" style="padding-left: 6px; padding-right: 6px; margin:5px auto 5px;">
-    <div class="el-card is-hover-shadow" style="background:var(--customBlockBg)">
-  		<div class="el-card__header">
-  			<div class="clearfix">
-    		<span title="凭证、财务报表、NCC" style="color:$accentColor"><b>总账及NCC管理</b></span>
-    		<button type="button" class="el-button el-button--text" style="float: right; padding: 3px 0px;"><span><a href="/categories/?category=总账及NCC接口" title="凭证、财务报表、NCC">更多...</a></span>
-    		</button>
-    		</div>
-  		</div>
-
-  		<div class="el-card__body" style="height:448px;margin:-30px auto -20px;">          	
-            <div class="text item" style="margin-left:-20px;">            
-                <ArticleListCategororTagUpdate :currentPage="currentPage" :perPage="8" :category="'总账及NCC接口'" />
-            </div>
-        </div>
-    </div>
-  </div>
-  <div class="el-col el-col-8" style="padding-left: 6px; padding-right: 6px; margin:5px auto 5px;">
-    <div class="el-card is-hover-shadow">
-  		<div class="el-card__header">
-  			<div class="clearfix">
-    		<span title="现金日记账、银行日记账、银行存款对账、余额调节"><b>出纳管理</b></span>
-    		<button type="button" class="el-button el-button--text" style="float: right; padding: 3px 0px;"><span><a href="/categories/?category=出纳管理" title="现金日记账、银行日记账、银行存款对账、余额调节">更多...</a></span>
-    		</button>
-    		</div>
-  		</div>
-
-  		<div class="el-card__body" style="height:448px;margin:-30px auto -20px;">          	
-            <div class="text item" style="margin-left:-20px;">
-                <ArticleListCategororTagUpdate :currentPage="currentPage" :perPage="8" :category="'出纳管理'" />
-            </div>
-        </div>
-    </div>
-  </div>
-  <div class="el-col el-col-8" style="padding-left: 6px; padding-right: 6px; margin:5px auto 5px;">
-    <div class="el-card is-hover-shadow">
-  		<div class="el-card__header">
-  			<div class="clearfix">
-    		<span title="应收、收款、应付、付款、结算等往来管理"><b>应收应付管理</b></span>
-    		<button type="button" class="el-button el-button--text" style="float: right; padding: 3px 0px;"><span><a href="/categories/?category=应收应付管理" title="应收、收款、应付、付款、结算等往来管理">更多...</a></span>
-    		</button>
-    		</div>
-  		</div>
-
-  		<div class="el-card__body" style="height:448px;margin:-30px auto -20px;">          	
-            <div class="text item" style="margin-left:-20px;">
-                <ArticleListCategororTagUpdate :currentPage="currentPage" :perPage="8" :category="'应收应付管理'" />
-            </div>
-        </div>
-    </div>
-  </div>
-  <div class="el-col el-col-8" style="padding-left: 6px; padding-right: 6px; margin:5px auto 5px;">
-    <div class="el-card is-hover-shadow">
-  		<div class="el-card__header">
-  			<div class="clearfix">
-    		<span title="固定资产新增、变更、折旧、盘点等"><b>固定资产管理</b></span>
-    		<button type="button" class="el-button el-button--text" style="float: right; padding: 3px 0px;"><span><a href="/categories/?category=固定资产管理" title="固定资产新增、变更、折旧、盘点等">更多...</a></span>
-    		</button>
-    		</div>
-  		</div>
-
-  		<div class="el-card__body" style="height:448px;margin:-30px auto -20px;">          	
-            <div class="text item" style="margin-left:-20px;">
-                <ArticleListCategororTagUpdate :currentPage="currentPage" :perPage="8" :category="'固定资产管理'" />
-            </div>
-        </div>
-    </div>
-  </div>
-  <div class="el-col el-col-8" style="padding-left: 6px; padding-right: 6px; margin:5px auto 5px;">
-    <div class="el-card is-hover-shadow">
-  		<div class="el-card__header">
-  			<div class="clearfix">
-    		<span title="核算整车、精品配件、辅料等的成本及采购核销、销售核销"><b>存货核算</b></span>
-    		<button type="button" class="el-button el-button--text" style="float: right; padding: 3px 0px;"><span><a href="/categories/?category=存货核算" title="核算整车、精品配件、辅料等的成本及采购核销、销售核销">更多...</a></span>
-    		</button>
-    		</div>
-  		</div>
-
-  		<div class="el-card__body" style="height:448px;margin:-30px auto -20px;">          	
-            <div class="text item" style="margin-left:-20px;">
-                <ArticleListCategororTagUpdate :currentPage="currentPage" :perPage="8" :category="'存货核算'" />
-            </div>
-        </div>
-    </div>
-  </div>
-  <div class="el-col el-col-8" style="padding-left: 6px; padding-right: 6px; margin:5px auto 5px;">
-    <div class="el-card is-hover-shadow">
-  		<div class="el-card__header">
-  			<div class="clearfix">
-    		<span title="各财务领域管理报表"><b>财务管理报表</b></span>
-    		<button type="button" class="el-button el-button--text" style="float: right; padding: 3px 0px;"><span><a href="/categories/?category=财务管理报表" title="各财务领域管理报表">更多...</a></span>
-    		</button>
-    		</div>
-  		</div>
-
-  		<div class="el-card__body" style="height:448px;margin:-30px auto -20px;">          	
-            <div class="text item" style="margin-left:-20px;">
-                <ArticleListCategororTagUpdate :currentPage="currentPage" :perPage="8" :category="'财务管理报表'" />
-            </div>
-        </div>
-    </div>
-  </div>
-
-</div>
-<style>
-#cust-rowcol
-    .el-col-8{
-            width:33.33333%
-        }
-    @media only screen and (max-width:1100px){
-    	#cust-rowcol
-            .el-col-8{
-                width:50%
-            }
-    }
-    @media only screen and (min-width:720px) and (max-width:799px){
-    	#cust-rowcol
-        .el-col-8{
-                width:100%
-            }
-    }
-    @media only screen and (min-width:560px) and (max-width:719px){
-    	#cust-rowcol
-            .el-col-8{
-                width:50%
-            }
-    }
-    @media only screen and (max-width:559px){
-    	#cust-rowcol
-            .el-col-8{
-                width:100%
-            }
-    }
-</style>
-```
-
-:::
-
-
-
-## 🎉销售结算及客户权益
-
-> 本栏目包括：前台销售结算、预收款账户、优惠券、会员储值、会员套餐、会员折扣、会员积分等。
-
-<ArticleListCategororTagUpdate2 :currentPage="currentPage" :perPage="10" :category="'客户权益'" />
-
-::: right
-
-[更多文章](/categories/?category=客户权益)
-
-:::
 
 ## 🎉业务版块分类文章
 
@@ -661,6 +505,168 @@ simplePostListLength: 12 # 简约版文章列表显示的文章数量，默认10
 ```
 
 :::
+
+
+
+## 🎉前台收款及客户权益
+
+> 本栏目包括：前台收款、预收款账户、优惠券、会员储值、会员套餐、会员折扣、会员积分等。
+
+<ArticleListCategororTagUpdate2 :currentPage="currentPage" :perPage="10" :category="'客户权益'" />
+
+::: right
+
+[更多文章](/categories/?category=客户权益)
+
+:::
+
+
+
+## 🎉财务版块分类文章
+
+::: demo
+
+```
+<div class="el-row" id="cust-rowcol">
+  <div class="el-col el-col-8" style="padding-left: 6px; padding-right: 6px; margin:5px auto 5px;">
+    <div class="el-card is-hover-shadow" style="background:var(--customBlockBg)">
+  		<div class="el-card__header">
+  			<div class="clearfix">
+    		<span title="凭证、财务报表、NCC" style="color:$accentColor"><b>总账及NCC管理</b></span>
+    		<button type="button" class="el-button el-button--text" style="float: right; padding: 3px 0px;"><span><a href="/categories/?category=总账及NCC接口" title="凭证、财务报表、NCC">更多...</a></span>
+    		</button>
+    		</div>
+  		</div>
+
+  		<div class="el-card__body" style="height:448px;margin:-30px auto -20px;">          	
+            <div class="text item" style="margin-left:-20px;">            
+                <ArticleListCategororTagUpdate :currentPage="currentPage" :perPage="8" :category="'总账及NCC接口'" />
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="el-col el-col-8" style="padding-left: 6px; padding-right: 6px; margin:5px auto 5px;">
+    <div class="el-card is-hover-shadow">
+  		<div class="el-card__header">
+  			<div class="clearfix">
+    		<span title="现金日记账、银行日记账、银行存款对账、余额调节"><b>出纳管理</b></span>
+    		<button type="button" class="el-button el-button--text" style="float: right; padding: 3px 0px;"><span><a href="/categories/?category=出纳管理" title="现金日记账、银行日记账、银行存款对账、余额调节">更多...</a></span>
+    		</button>
+    		</div>
+  		</div>
+
+  		<div class="el-card__body" style="height:448px;margin:-30px auto -20px;">          	
+            <div class="text item" style="margin-left:-20px;">
+                <ArticleListCategororTagUpdate :currentPage="currentPage" :perPage="8" :category="'出纳管理'" />
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="el-col el-col-8" style="padding-left: 6px; padding-right: 6px; margin:5px auto 5px;">
+    <div class="el-card is-hover-shadow">
+  		<div class="el-card__header">
+  			<div class="clearfix">
+    		<span title="应收、收款、应付、付款、结算等往来管理"><b>应收应付管理</b></span>
+    		<button type="button" class="el-button el-button--text" style="float: right; padding: 3px 0px;"><span><a href="/categories/?category=应收应付管理" title="应收、收款、应付、付款、结算等往来管理">更多...</a></span>
+    		</button>
+    		</div>
+  		</div>
+
+  		<div class="el-card__body" style="height:448px;margin:-30px auto -20px;">          	
+            <div class="text item" style="margin-left:-20px;">
+                <ArticleListCategororTagUpdate :currentPage="currentPage" :perPage="8" :category="'应收应付管理'" />
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="el-col el-col-8" style="padding-left: 6px; padding-right: 6px; margin:5px auto 5px;">
+    <div class="el-card is-hover-shadow">
+  		<div class="el-card__header">
+  			<div class="clearfix">
+    		<span title="固定资产新增、变更、折旧、盘点等"><b>固定资产管理</b></span>
+    		<button type="button" class="el-button el-button--text" style="float: right; padding: 3px 0px;"><span><a href="/categories/?category=固定资产管理" title="固定资产新增、变更、折旧、盘点等">更多...</a></span>
+    		</button>
+    		</div>
+  		</div>
+
+  		<div class="el-card__body" style="height:448px;margin:-30px auto -20px;">          	
+            <div class="text item" style="margin-left:-20px;">
+                <ArticleListCategororTagUpdate :currentPage="currentPage" :perPage="8" :category="'固定资产管理'" />
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="el-col el-col-8" style="padding-left: 6px; padding-right: 6px; margin:5px auto 5px;">
+    <div class="el-card is-hover-shadow">
+  		<div class="el-card__header">
+  			<div class="clearfix">
+    		<span title="核算整车、精品配件、辅料等的成本及采购核销、销售核销"><b>存货核算</b></span>
+    		<button type="button" class="el-button el-button--text" style="float: right; padding: 3px 0px;"><span><a href="/tags/?tag=存货核算" title="核算整车、精品配件、辅料等的成本及采购核销、销售核销">更多...</a></span>
+    		</button>
+    		</div>
+  		</div>
+
+  		<div class="el-card__body" style="height:448px;margin:-30px auto -20px;">          	
+            <div class="text item" style="margin-left:-20px;">
+                <ArticleListCategororTagUpdate :currentPage="currentPage" :perPage="8" :tag="'存货核算'" />
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="el-col el-col-8" style="padding-left: 6px; padding-right: 6px; margin:5px auto 5px;">
+    <div class="el-card is-hover-shadow">
+  		<div class="el-card__header">
+  			<div class="clearfix">
+    		<span title="各财务领域管理报表"><b>财务管理报表</b></span>
+    		<button type="button" class="el-button el-button--text" style="float: right; padding: 3px 0px;"><span><a href="/categories/?category=财务管理报表" title="各财务领域管理报表">更多...</a></span>
+    		</button>
+    		</div>
+  		</div>
+
+  		<div class="el-card__body" style="height:448px;margin:-30px auto -20px;">          	
+            <div class="text item" style="margin-left:-20px;">
+                <ArticleListCategororTagUpdate :currentPage="currentPage" :perPage="8" :category="'财务管理报表'" />
+            </div>
+        </div>
+    </div>
+  </div>
+
+</div>
+<style>
+#cust-rowcol
+    .el-col-8{
+            width:33.33333%
+        }
+    @media only screen and (max-width:1100px){
+    	#cust-rowcol
+            .el-col-8{
+                width:50%
+            }
+    }
+    @media only screen and (min-width:720px) and (max-width:799px){
+    	#cust-rowcol
+        .el-col-8{
+                width:100%
+            }
+    }
+    @media only screen and (min-width:560px) and (max-width:719px){
+    	#cust-rowcol
+            .el-col-8{
+                width:50%
+            }
+    }
+    @media only screen and (max-width:559px){
+    	#cust-rowcol
+            .el-col-8{
+                width:100%
+            }
+    }
+</style>
+```
+
+:::
+
+
 
 ## 💎 近期计划
 

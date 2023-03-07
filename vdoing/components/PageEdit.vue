@@ -8,11 +8,23 @@
     </div>
 
     <div class="tags" v-if="$themeConfig.tag !== false && tags && tags[0]">
+      关键词：
       <router-link
         :to="`/tags/?tag=${encodeURIComponent(item)}`"
         v-for="(item, index) in tags"
         :key="index"
-        title="标签"
+        title="点我获取更多相关标签文章"
+        >#{{ item }}</router-link
+      >
+    </div>
+
+    <div class="tags" v-if="$themeConfig.category !== false && categories && categories[0]">
+      主题分类：
+      <router-link
+        :to="`/categories/?category=${encodeURIComponent(item)}`"
+        v-for="(item, index) in categories"
+        :key="index"
+        title="点我获取更多相关分类文章"
         >#{{ item }}</router-link
       >
     </div>
@@ -32,6 +44,9 @@ export default {
   computed: {
     tags () {
       return this.$frontmatter.tags
+    },
+    categories () {
+      return this.$frontmatter.categories
     },
 
     lastUpdated () {
@@ -141,7 +156,7 @@ export default {
 .page-edit
   @extend $wrapper
   padding-top 1rem
-  padding-bottom 1rem
+  padding-bottom 0rem
   overflow auto
   .edit-link
     display inline-block

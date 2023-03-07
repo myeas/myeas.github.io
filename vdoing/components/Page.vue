@@ -22,13 +22,13 @@
               $frontmatter.titleTag
             }}</span>
           </h1>
-
+          <PageEdit />
           <slot name="top" v-if="isShowSlotT" />
 
           <Content class="theme-vdoing-content" />
         </div>
         <slot name="bottom" v-if="isShowSlotB" />
-        <PageEdit />
+        <!-- <PageEdit /> -->
 
         <PageNav v-bind="{ sidebarItems }" />
       </div>
