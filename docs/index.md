@@ -159,15 +159,7 @@ simplePostListLength: 12 # 简约版文章列表显示的文章数量，默认10
 
 - #### 金蝶系统应用质量检查体系：[金蝶系统应用质量检查体系](/categories/?category=检查体系)
 
-## 🎉最近更新
 
-<ArticleListUpdate2 :length="20" />
-
-::: right
-
-[更多文章](/archives/)>
-
-:::
 
 ## 🎖专项专题
 
@@ -243,6 +235,18 @@ simplePostListLength: 12 # 简约版文章列表显示的文章数量，默认10
 
 <br/>
 
+## 🎉最近更新
+
+<ArticleListUpdate2 :length="20" />
+
+::: right
+
+[更多文章](/archives/)>
+
+:::
+
+<!--
+
 ## 财务核算规范
 
 <ArticleListCategororTagUpdate2 :currentPage="currentPage" :perPage="6" :tag="'财务核算规范'" />
@@ -252,6 +256,8 @@ simplePostListLength: 12 # 简约版文章列表显示的文章数量，默认10
 [更多文章](/categories/?category=财务核算规范)>
 
 :::
+
+-->
 
 <!--
 
@@ -354,13 +360,17 @@ simplePostListLength: 12 # 简约版文章列表显示的文章数量，默认10
 
 -->
 
+<!--
+
 ::: danger 特别提醒
 
 以下版块内容，在调整丰富中，敬请期待！
 
 :::
 
+-->
 
+<!--
 
 ## 🎉业务版块分类文章
 
@@ -377,7 +387,7 @@ simplePostListLength: 12 # 简约版文章列表显示的文章数量，默认10
     		</button>
     		</div>
   		</div>
-  		<!--div style="margin:20px 20px auto 20px;">🎉新车及二手车的采购、销售、库存及核算</div-->
+
   		<div class="el-card__body" style="height:448px;margin:-30px auto -20px;">          	
             <div class="text item" style="margin-left:-20px;">            
                 <ArticleListCategororTagUpdate :currentPage="currentPage" :perPage="8" :category="'整车及二手车管理'" />
@@ -394,7 +404,7 @@ simplePostListLength: 12 # 简约版文章列表显示的文章数量，默认10
     		</button>
     		</div>
   		</div>
-  		<!--div style="margin:20px 20px auto 20px;">🎉代办服务、上牌、保险、按揭、延保、商业产品</div-->
+
   		<div class="el-card__body" style="height:448px;margin:-30px auto -20px;">          	
             <div class="text item" style="margin-left:-20px;">
                 <ArticleListCategororTagUpdate :currentPage="currentPage" :perPage="8" :category="'增值代办管理'" />
@@ -411,7 +421,7 @@ simplePostListLength: 12 # 简约版文章列表显示的文章数量，默认10
     		</button>
     		</div>
   		</div>
-  		<!--div style="margin:20px 20px auto 20px;">🎉精品、配件、辅料等的采购、销售、库存及核算以及精品加装</div-->
+
   		<div class="el-card__body" style="height:448px;margin:-30px auto -20px;">          	
             <div class="text item" style="margin-left:-20px;">
                 <ArticleListCategororTagUpdate :currentPage="currentPage" :perPage="8" :category="'精品配件管理'" />
@@ -428,7 +438,7 @@ simplePostListLength: 12 # 简约版文章列表显示的文章数量，默认10
     		</button>
     		</div>
   		</div>
-  		<!--div style="margin:20px 20px auto 20px;">🎉一般维修、客户保养、厂家保养、索赔、理赔、维修预约等</div-->
+
   		<div class="el-card__body" style="height:448px;margin:-30px auto -20px;">          	
             <div class="text item" style="margin-left:-20px;">
                 <ArticleListCategororTagUpdate :currentPage="currentPage" :perPage="8" :category="'维修管理'" />
@@ -445,7 +455,7 @@ simplePostListLength: 12 # 简约版文章列表显示的文章数量，默认10
     		</button>
     		</div>
   		</div>
-  		<!--div style="margin:20px 20px auto 20px;">🎉新车销售/售后维修回访，保险/保养/保修/生日提醒，回访登记，流失，满意度，预约等</div-->
+
   		<div class="el-card__body" style="height:448px;margin:-30px auto -20px;">          	
             <div class="text item" style="margin-left:-20px;">
                 <ArticleListCategororTagUpdate :currentPage="currentPage" :perPage="8" :category="'客服管理'" />
@@ -462,7 +472,7 @@ simplePostListLength: 12 # 简约版文章列表显示的文章数量，默认10
     		</button>
     		</div>
   		</div>
-  		<!--div style="margin:20px 20px auto 20px;">🎉新车、二手车的采购、销售、库存及核算</div-->
+
   		<div class="el-card__body" style="height:448px;margin:-30px auto -20px;">          	
             <div class="text item" style="margin-left:-20px;">
                 <ArticleListCategororTagUpdate :currentPage="currentPage" :perPage="8" :category="'业务管理报表'" />
@@ -506,6 +516,8 @@ simplePostListLength: 12 # 简约版文章列表显示的文章数量，默认10
 
 :::
 
+-->
+
 
 
 ## 🎉前台收款及客户权益
@@ -521,6 +533,8 @@ simplePostListLength: 12 # 简约版文章列表显示的文章数量，默认10
 :::
 
 
+
+<!--
 
 ## 🎉财务版块分类文章
 
@@ -666,7 +680,7 @@ simplePostListLength: 12 # 简约版文章列表显示的文章数量，默认10
 
 :::
 
-
+-->
 
 ## 💎 近期计划
 
