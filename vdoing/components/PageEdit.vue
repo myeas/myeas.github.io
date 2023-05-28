@@ -29,7 +29,7 @@
       >
     </div>
 
-    <div class="last-updated" v-if="lastUpdated">
+    <div class="last-updated" v-if="lastUpdated && $frontmatter.lastUpdated !== false ">
       <span class="prefix">{{ lastUpdatedText }}:</span>
       <span class="time">{{ lastUpdated }}</span>
     </div>
