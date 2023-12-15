@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: ./img/logo.jpg
+# heroImage: # ./img/logo.jpg
 heroText: 零售系统应用帮助中心 #金蝶EAS系统帮助中心
 tagline: 🚀持续完善 点滴进步
 # actionText: 开始使用 →
@@ -12,7 +12,7 @@ action:
   - text: 旧版手册 ↗
     link: ./pages/old/
 
-bannerBg: background:#fff #none # auto => 网格纹背景(有bodyBgImg时无背景)，默认 | none => 无 | '大图地址' | background: 自定义背景样式       提示：如发现文本颜色不适应你的背景时可以到palette.styl修改$bannerTextColor变量
+bannerBg: auto # none # auto => 网格纹背景(有bodyBgImg时无背景)，默认 | none => 无 | '大图地址' | background: 自定义背景样式       提示：如发现文本颜色不适应你的背景时可以到palette.styl修改$bannerTextColor变量
 
 
 

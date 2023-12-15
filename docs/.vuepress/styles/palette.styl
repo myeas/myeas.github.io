@@ -63,7 +63,7 @@ $badgeErrorColor = #DA5961
 $navbarHeight = 3.6rem
 $sidebarWidth = 18rem
 $contentWidth = 1120px   //原860px
-$homePageWidth = 1300px
+$homePageWidth = 1280px
 $rightMenuWidth = 230px // 右侧菜单
 
 // 代码块
@@ -101,6 +101,11 @@ strong
   --textColor: #00323c
   --textLightenColor: #d63200     // `` 高亮，原来是 #0085AD
   --borderColor: rgba(0,0,0,.15)
+  .home-wrapper
+    .banner
+      background: rgba(255,255,255,1)
+      .banner-conent
+        background: rgba(255,255,255,1)
   // 代码块浅色主题
   //--codeBg: #f6f8fa
   //--codeColor: #24292e
@@ -185,6 +190,21 @@ strong
   --borderColor: #1d1d26
   --codeBg: #1d1d26
   --codeColor: #A9B7C6
+ 
+  .home-wrapper
+    .banner
+      background: rgba(40,40,56,1)
+      .banner-conent
+        background: rgba(40,40,56,1)
+        textColor: #acb7c4
+        .hero
+          h1
+            color: #acb7c4
+          .description
+            color: #acb7c4
+        .features
+          color: #acb7c4
+
   codeThemeDark()
   div[class*="language-"].line-numbers-mode::after  // 代码块的行数和内容分割线颜色
     border-right 1px solid rgba(0, 0, 0, 0.66)
@@ -310,6 +330,11 @@ strong
   --borderColor: rgba(0,0,0,.15)
   --codeBg: #282c34
   --codeColor: #fff
+  .home-wrapper
+    .banner
+      background: rgba(245,245,213,1)
+      .banner-conent
+        background: rgba(245,245,213,1)
   codeThemeDark()
 
 
