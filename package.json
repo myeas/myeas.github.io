@@ -48,7 +48,7 @@
     "json2yaml": "^1.1.0",
     "markdown-it-disable-url-encode": "^1.0.1",
     "vue-tabs-component": "^1.5.0",
-    "vuepress": "^1.9.9",
+    "vuepress": "^1.9.10",
     "vuepress-plugin-baidu-autopush": "^1.0.1",
     "vuepress-plugin-baidu-tongji": "^1.0.1",
     "vuepress-plugin-comment": "^0.7.3",
