@@ -125,7 +125,7 @@
       <!-- 调整卡片列表位置 -->
         <Content class="theme-vdoing-content custom card-box" />
         <!-- 增加文章列表-->
-        <template v-if="homeData.hidearticlelistblock === 'false'">
+        <template v-if="!homeData.showarticlelistblock || homeData.showarticlelistblock === 'true'">
         <div class="theme-vdoing-content custom card-box"> 
           <div class="demo-block demo-zh-CN demo-">
             <div class="demo-content"> 
@@ -218,12 +218,12 @@
             $categoriesAndTags.categories.length
           "
           :categoriesData="$categoriesAndTags.categories"
-          :length="20"
+          :length="15"
         />
         <TagsBar
           v-if="$themeConfig.tag !== false && $categoriesAndTags.tags.length"
           :tagsData="$categoriesAndTags.tags"
-          :length="30"
+          :length="15"
         />
         <div
           class="custom-html-box card-box"
