@@ -4,7 +4,7 @@
       <template>
               11111
               <!-- 增加文章列表-->
-              <template v-if="homeData.hidearticlelistblock === 'flase'">
+              <template v-if="homeData.hidearticlelistblock === 'false'">
                 <div class="theme-vdoing-content custom card-box"> 
                   <div class="demo-block demo-zh-CN demo-">
                     <div class="demo-content"> 

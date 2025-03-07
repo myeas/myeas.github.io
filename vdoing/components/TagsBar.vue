@@ -18,7 +18,7 @@
       <router-link
         to="/tags/"
         v-if="length !== 'all' && tagsData.length > length"
-      >更多...</router-link>
+      >更多标签》...</router-link>
     </div>
   </div>
 </template>

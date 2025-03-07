@@ -21,7 +21,7 @@
         to="/categories/"
         v-if="length !== 'all' && length < categoriesData.length"
         class="more"
-        >更多 ...</router-link
+        ><b>更多文章分类 》...</b></router-link
       >
     </div>
   </div>

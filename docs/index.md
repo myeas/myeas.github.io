@@ -28,7 +28,7 @@ features: # 可选的
     details: 为您答疑解惑，让你从容使用系统
     link: ./pages/faq/
 
-hidearticlelistblock: true  #true不显示文章分组块，flase显示文章分组块
+hidearticlelistblock: false #true不显示文章分组块，false显示文章分组块
 articlelistblocklength: 10
 articlelistblock: # 可选的
   - listname: 整车及二手车 #分类或标签的主题
@@ -282,9 +282,9 @@ simplePostListLength: 12 # 简约版文章列表显示的文章数量，默认10
 
 <ArticleListCategororTagUpdate3 :currentPage="currentPage" :perPage="9" :category="'系统应用检查体系'" />
 
--->
 
-<!--
+
+
 
 ## 🎉分类文章
 
@@ -310,7 +310,7 @@ simplePostListLength: 12 # 简约版文章列表显示的文章数量，默认10
     <el-button style="float: right; padding: 3px 0" type="text"><a href="/categories/?category=增值代办">更多...</a></el-button>
   </div>
   <div class="text item">
-    <ArticleListCategororTagUpdate :currentPage="currentPage" :perPage="5" :category="'整车及二手车管理'" />
+    <ArticleListCategororTagUpdate :currentPage="currentPage" :perPage="5" :category="'系统应用检查体系'" />
   </div>
     </el-card>
   </el-col>
@@ -736,6 +736,8 @@ simplePostListLength: 12 # 简约版文章列表显示的文章数量，默认10
 
 - #### 关于密码修改问题
 
+  :::: details
+
   根据信息系统管理要求，系统密码必须60天内至少修改一次，且不得和近两次密码一样。
 
   密码过期前，用户可以自行进行修改。过期前7天，系统会进行提醒，请予以注意。
@@ -744,7 +746,11 @@ simplePostListLength: 12 # 简约版文章列表显示的文章数量，默认10
 
   本部将考虑增加简易报表，显示自己的密码还有多长时间将过期。
 
+  :::: 
+
 - #### 关于频繁掉线和授权已分配完毕的问题
+
+  :::: details
 
   先说授权已分配完毕的问题，金蝶EAS系统是按模块+本模块最大同时在线人数（即授权许可证数目）进行授权的。所有模块并不是允许无限制用户使用的，因此当同一时点，使用同一模块的用户数已达到购买的最大同时在线数时，则会提示授权已分配完毕。
 
@@ -763,10 +769,14 @@ simplePostListLength: 12 # 简约版文章列表显示的文章数量，默认10
 
   目前系统闲置时间为30分钟。如果您要长时间（超过30分钟）不操作系统，请关闭或保存单据退出占用的模块。如果未退出单据，掉线后，点击`尝试重连`，输入用户密码，即可重新登录系统。
 
+  ::::
+
 - #### 关于零售系统卡顿问题
 
-  总体来看，本部的服务器带宽、服务器性能，是能满足EAS系统应用要求的，出现卡顿，主要原因有：
+  :::: details
 
+  总体来看，本部的服务器带宽、服务器性能，是能满足EAS系统应用要求的，出现卡顿，主要原因有：
+  
   - 您所处网络较慢，请联系门店升级、优化网络。
   - 您的计算机性能较差，请联系门店升级、优化电脑（如增加内存、升级为固态硬盘、清理自启动进程等）。
   - 您计算机打开了较多的程序，建议您关闭不用的程序和进程。
@@ -774,5 +784,5 @@ simplePostListLength: 12 # 简约版文章列表显示的文章数量，默认10
   在导出数据时，如果数据量较大，一般超过3000行，列又比较多时，可能会出现卡顿，建议缩小查询范围分多次查询，隐藏不必要的字段，再进行导出。
 
   在查询数据时，特别是开发的扩展报表，如果查询范围较大，可能会出现卡顿，建议缩小时间范围。本部也将持续优化报表。也请联系本部，提供意见和建议。
-
   
+  :::: 
