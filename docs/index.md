@@ -284,8 +284,6 @@ simplePostListLength: 12 # 简约版文章列表显示的文章数量，默认10
 
 
 
-
-
 ## 🎉分类文章
 
 ::: demo
