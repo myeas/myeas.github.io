@@ -28,7 +28,7 @@ features: # 可选的
     details: 为您答疑解惑，让你从容使用系统
     link: ./pages/faq/
 
-showarticlelistblock: true     #true不显示文章分组块，false显示文章分组块
+showarticlelistblock: false     #true不显示文章分组块，false显示文章分组块
 articlelistblocklength: 10
 articlelistblock: # 可选的
   - listname: 整车及二手车 #分类或标签的主题
