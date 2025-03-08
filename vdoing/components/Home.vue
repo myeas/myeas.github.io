@@ -125,7 +125,7 @@
       <!-- 调整卡片列表位置 -->
         <Content class="theme-vdoing-content custom card-box" />
         <!-- 增加文章列表-->
-        <template v-if="!homeData.showarticlelistblock || homeData.showarticlelistblock === 'true'">
+        <template v-if="!homeData.hidearticlelistblock || homeData.hidearticlelistblock === 'false'">
         <div class="theme-vdoing-content custom card-box"> 
           <div class="demo-block demo-zh-CN demo-">
             <div class="demo-content"> 
