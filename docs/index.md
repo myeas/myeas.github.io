@@ -87,7 +87,7 @@ articlelistside: # 可选的
     listlink: ./categories/?category=系统安装
     categoryortag: category    #值只能是category 或 tag
     keyname: 系统安装
-    articleLength: 5
+    articleLength: 6
     icon: biaoqian1
   - listname: 系统应用检查体系
     listauto: auto
